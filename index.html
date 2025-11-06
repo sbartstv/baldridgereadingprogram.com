@@ -1,9 +1,11 @@
+html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baldridge Reading Program - Empowering Education Worldwide</title>
+    <title>Baldridge Speed Reading & Study Strategy Program</title>
     <style>
         * {
             margin: 0;
@@ -11,949 +13,428 @@
             box-sizing: border-box;
         }
 
-    :root {
-        --primary: #2c3e50;
-        --secondary: #34495e;
-        --accent: #3498db;
-        --light-blue: #5dade2;
-        --dark: #1a252f;
-        --light: #ecf0f1;
-        --white: #ffffff;
-        --grey: #7f8c8d;
-        --light-grey: #bdc3c7;
-    }
-
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: var(--dark);
-        overflow-x: hidden;
-    }
-
-    /* Skip to main content link for screen readers */
-    .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: var(--accent);
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        z-index: 100;
-    }
-
-    .skip-link:focus {
-        top: 0;
-    }
-
-    /* Focus styles for accessibility */
-    a:focus, button:focus, [tabindex]:focus {
-        outline: 3px solid var(--accent);
-        outline-offset: 2px;
-    }
-
-    /* Screen reader only text */
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-
-    /* Hero Section */
-    .hero {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: var(--white);
-        overflow: hidden;
-    }
-
-    .hero-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 900px;
-        padding: 0 20px;
-        animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-        font-weight: 600;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        animation: fadeInUp 1s ease-out 0.2s backwards;
-        letter-spacing: -0.5px;
-    }
-
-    .hero-subtitle {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-        font-weight: 300;
-        animation: fadeInUp 1s ease-out 0.4s backwards;
-    }
-
-    .scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-        animation: bounce 2s infinite;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-    }
-
-    .scroll-indicator:hover,
-    .scroll-indicator:focus {
-        opacity: 0.8;
-    }
-
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-        40% { transform: translateX(-50%) translateY(-10px); }
-        60% { transform: translateX(-50%) translateY(-5px); }
-    }
-
-    .scroll-indicator::after {
-        content: '↓';
-        font-size: 2rem;
-        color: var(--white);
-    }
-
-    /* Universities Section */
-    .universities {
-        background: linear-gradient(135deg, var(--primary), var(--secondary));
-        color: var(--white);
-        padding: 80px 20px;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 50px;
-        position: relative;
-        animation: fadeIn 1s ease-out;
-        font-weight: 500;
-        letter-spacing: -0.5px;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    .section-title::after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 3px;
-        background: var(--accent);
-        margin: 20px auto 0;
-        border-radius: 2px;
-    }
-
-    .uni-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 15px;
-        margin-top: 40px;
-    }
-
-    .uni-item {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 20px;
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-        animation: fadeInScale 0.6s ease-out backwards;
-    }
-
-    .uni-item:nth-child(n) {
-        animation-delay: calc(0.05s * var(--i));
-    }
-
-    @keyframes fadeInScale {
-        from {
-            opacity: 0;
-            transform: scale(0.95);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    .uni-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        background: rgba(52, 152, 219, 0.2);
-    }
-
-    .uni-name {
-        font-weight: 500;
-        font-size: 1.05rem;
-    }
-
-    .uni-years {
-        color: var(--light-blue);
-        font-weight: 600;
-        margin-left: 10px;
-    }
-
-    /* History Section */
-    .history {
-        padding: 100px 20px;
-        background: var(--white);
-    }
-
-    .history-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .history-image {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        transition: transform 0.3s ease;
-    }
-
-    .history-image:hover {
-        transform: scale(1.02);
-    }
-
-    .history-text h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: var(--primary);
-        font-weight: 500;
-    }
-
-    .history-text p {
-        margin-bottom: 15px;
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: var(--grey);
-    }
-
-    /* Offering Section */
-    .offering {
-        background: var(--light);
-        padding: 100px 20px;
-    }
-
-    .offering-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: 50px auto 0;
-    }
-
-    .offering-card {
-        background: var(--white);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: fadeInUp 0.6s ease-out backwards;
-        border-top: 3px solid var(--accent);
-    }
-
-    .offering-card:nth-child(n) {
-        animation-delay: calc(0.1s * var(--i));
-    }
-
-    .offering-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
-    }
-
-    .offering-card h3 {
-        color: var(--primary);
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    .offering-card p {
-        color: var(--grey);
-        font-size: 1.05rem;
-        line-height: 1.7;
-    }
-
-    /* White House Section */
-    .whitehouse {
-        padding: 100px 20px;
-        background: var(--white);
-    }
-
-    .whitehouse-image {
-        width: 100%;
-        max-width: 900px;
-        margin: 40px auto;
-        display: block;
-        border-radius: 10px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-    }
-
-    .whitehouse-quote {
-        background: var(--light);
-        padding: 40px;
-        border-left: 4px solid var(--accent);
-        font-style: italic;
-        font-size: 1.2rem;
-        margin: 40px auto;
-        max-width: 900px;
-        border-radius: 8px;
-        color: var(--grey);
-    }
-
-    /* Benefits Section */
-    .benefits {
-        background: linear-gradient(135deg, #2c3e50, #34495e);
-        color: var(--white);
-        padding: 100px 20px;
-    }
-
-    .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
-        max-width: 1200px;
-        margin: 50px auto 0;
-    }
-
-    .benefit-card {
-        text-align: center;
-        padding: 40px 30px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 10px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .benefit-card:hover {
-        transform: translateY(-8px);
-        background: rgba(52, 152, 219, 0.15);
-    }
-
-    .benefit-icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-
-    .benefit-card h3 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-    }
-
-    /* Stats Section */
-    .stats {
-        padding: 80px 20px;
-        background: var(--accent);
-        color: var(--white);
-        text-align: center;
-    }
-
-    /* Testimonial Section */
-    .testimonials {
-        padding: 100px 20px;
-        background: var(--light);
-    }
-
-    .testimonial-card {
-        background: var(--white);
-        padding: 50px;
-        border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        max-width: 900px;
-        margin: 50px auto;
-        position: relative;
-        border-left: 4px solid var(--accent);
-    }
-
-    .testimonial-card::before {
-        content: '"';
-        font-size: 5rem;
-        color: var(--light-blue);
-        position: absolute;
-        top: 20px;
-        left: 30px;
-        opacity: 0.2;
-        font-weight: 600;
-    }
-
-    .testimonial-text {
-        font-size: 1.2rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
-        position: relative;
-        z-index: 1;
-        color: var(--grey);
-    }
-
-    .testimonial-author {
-        font-weight: 500;
-        color: var(--primary);
-        font-size: 1.1rem;
-    }
-
-    /* Contact Section */
-    .contact {
-        background: linear-gradient(135deg, var(--dark), var(--primary));
-        color: var(--white);
-        padding: 100px 20px;
-        text-align: center;
-    }
-
-    .contact-info {
-        max-width: 600px;
-        margin: 40px auto;
-    }
-
-    .contact-item {
-        margin: 30px 0;
-        font-size: 1.3rem;
-        font-weight: 300;
-    }
-
-    .contact-item a {
-        color: var(--light-blue);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .contact-item a:hover {
-        color: var(--white);
-    }
-
-    /* Footer */
-    footer {
-        background: var(--dark);
-        color: var(--white);
-        padding: 40px 20px;
-        text-align: center;
-    }
-
-    footer p {
-        margin: 10px 0;
-        font-size: 0.9rem;
-        opacity: 0.7;
-        font-weight: 300;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        .hero h1 {
-            font-size: 2.5rem;
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --grey: #7f8c8d;
+            --dark: #1a252f;
         }
 
-        .hero-subtitle {
-            font-size: 1.3rem;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+            text-align: center;
+            padding: 0 10px;
         }
 
-        .history-content {
-            grid-template-columns: 1fr;
-        }
-
-        .uni-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .section-title {
-            font-size: 2rem;
-        }
-
-        .offering-grid, .benefits-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .history-content, .testimonials > .container > div[style*="grid-template-columns"], .whitehouse > .container > div[style*="grid-template-columns"] {
-            grid-template-columns: 1fr;
-        }
-
-        .benefit-card {
+        img {
             max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
         }
-    }
-</style></head>
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 30px 0 20px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 25px 0 15px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin: 20px 0 10px;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--grey);
+        }
+
+        ul {
+            padding-left: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .scroll-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .item {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .item span:first-child {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .benefit {
+            margin: 20px 0;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            color: var(--grey);
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 4px solid var(--accent);
+        }
+
+        .quote p {
+            margin: 0;
+        }
+
+        .quote cite {
+            display: block;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.9rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.4rem; }
+            p, li { font-size: 1rem; }
+            .hero { height: 70vh; }
+        }
+    </style>
+</head>
 <body>
-    <!-- Skip to main content for keyboard users -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- Hero Section -->
-<section class="hero" role="banner" aria-label="Welcome banner">
-    <img src="1tugofwar.png" alt="Students engaged in tug of war, demonstrating teamwork and effort. Empowering parents, higher educational leadership and students for a brighter future. Supporting education and innovation worldwide. A Few Locations Of Baldridge Programs: Alfred University 16 years, Alma College 19 years, Agnes Scott College 26 years, Brown University 9 years, Campbell University 7 years, Clarkson University 11 years, Colgate University 21 years, Converse College 20 years, Davidson College 12 years, Drew University 16 years, Furman University 12 years, Fairfield University 16 years, Gannon University 21 years, Johns Hopkins University 11 years, Kenyon College 10 years, Millsaps College 5 years, Ripon College 21 years, University of Richmond 21 years, Washington & Jefferson College 18 years, Williams College 7 years, Wofford College 16 years, Worcester Polytechnic Institute 13 years, Yale University 3 years." class="hero-bg" loading="lazy">
-    <div class="hero-content">
-    </div>
-    <button class="scroll-indicator" aria-label="Scroll to next section" tabindex="0"></button>
-</section>
+    <!-- Skip Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-<!-- Main Content -->
-<main id="main-content">
+    <!-- Hero -->
+    <section class="hero" role="banner" aria-label="Baldridge Program Hero">
+        <img src="1tugofwar.png" alt="Students in tug of war — teamwork, effort, and academic success" loading="lazy">
+        <button class="scroll-btn" aria-label="Scroll down">↓</button>
+    </section>
 
-<!-- Universities Section -->
-<section class="universities" aria-labelledby="universities-heading">
-    <div class="container">
-        <h2 class="section-title" id="universities-heading">A Few Locations Of Baldridge Programs</h2>
-        <div class="uni-grid" role="list" aria-label="Universities and colleges where Baldridge programs are offered">
-            <div class="uni-item" style="--i: 1" role="listitem">
-                <span class="uni-name">ALFRED UNIVERSITY</span>
-                <span class="uni-years">18 years</span>
-            </div>
-            <div class="uni-item" style="--i: 2" role="listitem">
-                <span class="uni-name">ALMA COLLEGE</span>
-                <span class="uni-years">19 years</span>
-            </div>
-            <div class="uni-item" style="--i: 3" role="listitem">
-                <span class="uni-name">AGNES SCOTT COLLEGE</span>
-                <span class="uni-years">28 years</span>
-            </div>
-            <div class="uni-item" style="--i: 4" role="listitem">
-                <span class="uni-name">BARNARD COLLEGE</span>
-            </div>
-            <div class="uni-item" style="--i: 5" role="listitem">
-                <span class="uni-name">BROWN UNIVERSITY</span>
-                <span class="uni-years">8 years</span>
-            </div>
-            <div class="uni-item" style="--i: 6" role="listitem">
-                <span class="uni-name">CAMPBELL UNIVERSITY</span>
-                <span class="uni-years">7 years</span>
-            </div>
-            <div class="uni-item" style="--i: 7" role="listitem">
-                <span class="uni-name">CLARKSON UNIVERSITY</span>
-                <span class="uni-years">11 years</span>
-            </div>
-            <div class="uni-item" style="--i: 8" role="listitem">
-                <span class="uni-name">COLGATE UNIVERSITY</span>
-                <span class="uni-years">21 years</span>
-            </div>
-            <div class="uni-item" style="--i: 9" role="listitem">
-                <span class="uni-name">CONVERSE COLLEGE</span>
-                <span class="uni-years">30 years</span>
-            </div>
-            <div class="uni-item" style="--i: 10" role="listitem">
-                <span class="uni-name">DAVIDSON COLLEGE</span>
-                <span class="uni-years">12 years</span>
-            </div>
-            <div class="uni-item" style="--i: 11" role="listitem">
-                <span class="uni-name">DREW UNIVERSITY</span>
-                <span class="uni-years">19 years</span>
-            </div>
-            <div class="uni-item" style="--i: 12" role="listitem">
-                <span class="uni-name">FURMAN UNIVERSITY</span>
-                <span class="uni-years">12 years</span>
-            </div>
-            <div class="uni-item" style="--i: 13" role="listitem">
-                <span class="uni-name">FAIRFIELD UNIVERSITY</span>
-                <span class="uni-years">18 years</span>
-            </div>
-            <div class="uni-item" style="--i: 14" role="listitem">
-                <span class="uni-name">GANNON UNIVERSITY</span>
-                <span class="uni-years">21 years</span>
-            </div>
-            <div class="uni-item" style="--i: 15" role="listitem">
-                <span class="uni-name">JOHNS HOPKINS UNIVERSITY</span>
-                <span class="uni-years">11 years</span>
-            </div>
-            <div class="uni-item" style="--i: 16" role="listitem">
-                <span class="uni-name">KENYON COLLEGE</span>
-                <span class="uni-years">10 years</span>
-            </div>
-            <div class="uni-item" style="--i: 17" role="listitem">
-                <span class="uni-name">MILLSAPS COLLEGE</span>
-                <span class="uni-years">8 years</span>
-            </div>
-            <div class="uni-item" style="--i: 18" role="listitem">
-                <span class="uni-name">MARIAN COLLEGE</span>
-                <span class="uni-years">21 years</span>
-            </div>
-            <div class="uni-item" style="--i: 19" role="listitem">
-                <span class="uni-name">UNIVERSITY OF RICHMOND</span>
-                <span class="uni-years">21 years</span>
-            </div>
-            <div class="uni-item" style="--i: 20" role="listitem">
-                <span class="uni-name">WASHINGTON & JEFFERSON COLLEGE</span>
-                <span class="uni-years">18 years</span>
-            </div>
-            <div class="uni-item" style="--i: 21" role="listitem">
-                <span class="uni-name">WILLIAMS COLLEGE</span>
-                <span class="uni-years">7 years</span>
-            </div>
-            <div class="uni-item" style="--i: 22" role="listitem">
-                <span class="uni-name">WOFFORD COLLEGE</span>
-                <span class="uni-years">16 years</span>
-            </div>
-            <div class="uni-item" style="--i: 23" role="listitem">
-                <span class="uni-name">WORCESTER POLYTECHNIC INSTITUTE</span>
-                <span class="uni-years">13 years</span>
-            </div>
-            <div class="uni-item" style="--i: 24" role="listitem">
-                <span class="uni-name">YALE UNIVERSITY</span>
-                <span class="uni-years">3 years</span>
-            </div>
-        </div>
-        
-        <h3 style="font-size: 2rem; text-align: center; margin-top: 80px; margin-bottom: 40px;">Private Schools - Lower, Middle and High Schools</h3>
-        <div class="uni-grid">
-            <div class="uni-item" style="--i: 25" role="listitem">
-                <span class="uni-name">GREENWICH HIGH SCHOOL</span>
-            </div>
-            <div class="uni-item" style="--i: 26" role="listitem">
-                <span class="uni-name">GREENWICH COUNTRY DAY</span>
-            </div>
-            <div class="uni-item" style="--i: 27" role="listitem">
-                <span class="uni-name">NORFOLK ACADEMY</span>
-            </div>
-            <div class="uni-item" style="--i: 28" role="listitem">
-                <span class="uni-name">VMI - VIRGINIA MILITARY INSTITUTE</span>
-            </div>
-            <div class="uni-item" style="--i: 29" role="listitem">
-                <span class="uni-name">ADMIRAL FARRAGUT</span>
-            </div>
-            <div class="uni-item" style="--i: 30" role="listitem">
-                <span class="uni-name">JACKSON ACADEMY</span>
-            </div>
-            <div class="uni-item" style="--i: 31" role="listitem">
-                <span class="uni-name">WALDORF SCHOOL</span>
-            </div>
-            <div class="uni-item" style="--i: 32" role="listitem">
-                <span class="uni-name">LOOMIS CHAFFEE</span>
-            </div>
-            <div class="uni-item" style="--i: 33" role="listitem">
-                <span class="uni-name">BISHOP DIEGO GARCIA</span>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Main Content -->
+    <main id="main">
 
-<!-- History Section -->
-<section class="history">
-    <div class="container">
-        <img src="2brss1956.png" alt="Baldridge Reading Services founding meeting in Greenwich Connecticut, 1956" class="history-image" loading="lazy">
-        <div class="history-text">
-            <h2>BRSS, Inc. Est. 1956</h2>
-            <p>In Greenwich, Connecticut Since 1956. Baldridge Reading President Kenneth P. Baldridge and Staff from Ivy League Universities.</p>
-            <p>Clifford P. Baldridge continues the Family Legacy as Co-Director of Baldridge Reading, operating out of the West Coast Branch with Offices in Beverly Hills, Santa Monica, Malibu, Santa Barbara and offering remote learning services.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Offering Section -->
-<section class="offering">
-    <div class="container">
-        <h2 class="section-title">OFFERING</h2>
-        <div class="offering-grid">
-            <div class="offering-card">
-                <h3>4 Hour Course (Two 2-Hour Sessions)</h3>
-                <p>Condensed from the 50 years 2-week long course taught at 400+ private and Ivy League colleges and private schools. Available In-Person or on Zoom.</p>
+        <!-- Welcome -->
+        <section class="section">
+            <div class="container">
+                <h1>Welcome to the Baldridge Speed Reading and Study Strategy Program</h1>
             </div>
-            <div class="offering-card">
-                <h3>Ongoing Private Tutoring</h3>
-                <p>Private One on One Tutoring and Mentoring Sessions after course completion.</p>
+        </section>
+
+        <!-- Who Can Benefit -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>Who Can Benefit From This Program?</h2>
+                <p><strong>Lower School (3rd – 6th Grade)</strong></p>
+                <p><strong>Middle & High School</strong></p>
+                <p><strong>College & University Students</strong></p>
+                <p><strong>Business Professionals</strong></p>
+                <p>More than 100,000 students have been helped using Baldridge’s unique techniques and strategies for enrichment as well as for failure prevention.</p>
             </div>
-        </div>
-        <div class="contact-info" style="margin-top: 50px; text-align: center;">
-            <p style="font-size: 1.3rem; color: var(--primary); font-weight: 500;"><strong>Contact: Vipmediapr@gmail.com</strong></p>
-            <p style="font-size: 1.1rem; color: var(--grey);">for Pricing and Enrollment.</p>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- White House Section -->
-<section class="whitehouse">
-    <div class="container">
-        <h2 class="section-title">Baldridge Reading Program Taught at The White House</h2>
-        <img src="3whitehouse.png" alt="The White House, Washington DC" class="whitehouse-image" loading="lazy">
-        
-        <div class="whitehouse-quote">
-            <p>The Baldridge's were invited to The White House. The Baldridge Program was taught at The White House for the President's Staff refining the collection and filtering of all White House Mail and all Global Intelligence, revising the President's Daily Brief. The PDB is a top-secret document produced and given each morning to POTUS, The President of the United States.</p>
-        </div>
-
-        <div class="testimonial-card">
-            <p class="testimonial-text">"We greatly appreciate the program conducted by your staff. It was professionally conducted, your instructors were outstanding and the participants' remarks have been very complimentary in every way."</p>
-            <p class="testimonial-author">— Landon Kite, Director of Correspondence, The White House</p>
-        </div>
-
-        <div style="max-width: 900px; margin: 60px auto;">
-            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">International Excellence</h3>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">International locations where the Baldridge Program has been offered include: Brussels, Munich, Vienna, Las Palm and Tokyo. One of the most unusual Baldridge Programs was taught aboard the S.S. Universe between mainland China and Sri Lanka, as part of a Semester at Sea voyage around the world.</p>
-            
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 20px; color: var(--grey);">Business and Government locations include: General Electric Company, IBM, Time-Warner, Inc., J.P. Morgan & Co., Alcan, Reader's Digest, United States Department of Labor and at The White House.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="benefits">
-    <div class="container">
-        <h2 class="section-title">You have a special opportunity to enroll in A Reading Skill Program Which is MORE Than Speed Reading.</h2>
-        
-        <img src="4tablet.png" alt="Young student engaged in learning with a tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        
-        <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-            <div class="benefit-card">
-                <div class="benefit-icon"></div>
-                <h3>Higher Test Scores</h3>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"></div>
-                <h3>Greater Retention</h3>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"></div>
-                <h3>Increased Speed</h3>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon">✓</div>
-                <h3>Better Comprehension</h3>
-            </div>
-            <div class="benefit-card">
-                <div class="benefit-icon"></div>
-                <h3>Stronger Concentration</h3>
-            </div>
-        </div>
-
-        <div style="max-width: 900px; margin: 60px auto; text-align: center;">
-            <h3 style="font-size: 2rem; margin-bottom: 30px; font-weight: 500;">You Can Save Time Reading and Studying by enrolling in the Baldridge Program</h3>
-            <p style="font-size: 1.2rem; line-height: 1.8; font-weight: 300;">You learn reading techniques IN YOUR OWN BOOKS, using textbooks and other academic reading as well as your personal reading material for enjoyment.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Stats Section -->
-<section class="stats">
-    <div class="container">
-        <h2 class="section-title" style="color: var(--white);">WHO CAN BENEFIT FROM THE PROGRAM?</h2>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 20px auto 50px; font-weight: 300;">Successful students as well as those experiencing academic difficulty. For over 60 years more than 500,000 students in 100s of Private Schools and Universities, from grades 3-12, college students and professionals have been helped by using Baldridge's unique techniques and strategies for enrichment as well as for <strong>failure prevention</strong></p>
-        
-        <div style="background: rgba(255,255,255,0.95); padding: 60px 20px; border-radius: 15px; max-width: 900px; margin: 0 auto;">
-            <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">After taking the BALDRIDGE PROGRAM</h3>
-            <h4 style="font-size: 1.5rem; color: var(--grey); font-style: italic; font-weight: 400;">STUDENTS READ FASTER with better understanding.</h4>
-            
-            <div style="margin-top: 40px;">
-                <p style="font-size: 1.3rem; color: var(--dark); font-weight: 500;">Improvement is immediate and long range.</p>
-                <p style="font-size: 1.1rem; color: var(--grey); margin-top: 15px; font-weight: 300;">The Baldridge Program is designed to establish reading and study strategies on a permanent basis for academic, personal and career reading.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Section with Parents Image -->
-<section class="testimonials">
-    <div class="container">
-        <h2 class="section-title">Limited Enrollment Opportunities for High Achieving Students Motivated to Learn from 3rd Grade - 12th, College Students and Professional Adults.</h2>
-        
-        <img src="5parents.png" alt="Group of adult learners in classroom setting" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        
-        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">Baldridge Reading and Study Strategy Programs have been taught by the Baldridge staff in more than 400 schools, colleges and business organizations.</p>
-                
-        <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge Program Conducted at The White House</h3>
-        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge's were invited to The White House. The Baldridge Program was taught at The White House for the President's Staff refining the collection and filtering of all White House Mail and all Global Intelligence, revising the President's Daily Brief. The PDB is a top-secret document produced and given each morning to POTUS, The President of the United States.</p>
-    </div>
-</section>
-
-<!-- Family Benefits Section -->
-<section class="testimonials" style="background: var(--white);">
-    <div class="container">
-        <h2 class="section-title">Why students, parents and families have been pleased with their decision to take the Baldridge Program</h2>
-        
-        <img src="6studentsparents.png" alt="Parents helping child with learning on tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        
-        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">The Baldridge Program is especially tailored to respond to each student's specific interests and needs.</p>
-                
-        <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge offers much more than simply "speed reading."</h3>
-        <p style="font-size: 1.1rem; margin-bottom: 15px; color: var(--grey);">In addition to reading faster, students learn to:</p>
-                
-        <ul style="list-style: none; padding: 0;">
-            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                Prepare for tests in a more thorough and organized way which improves retention.
-            </li>
-            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                Budget study time more wisely.
-            </li>
-            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                Organize lecture notes better.
-            </li>
-            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                Organize material for term papers.
-            </li>
-            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                Derive more satisfaction from reading.
-            </li>
-        </ul>
-
-        <div style="background: var(--primary); color: var(--white); padding: 60px 40px; border-radius: 15px; max-width: 900px; margin: 60px auto; text-align: center;">
-            <h3 style="font-size: 2rem; margin-bottom: 20px; font-weight: 500;">After the BALDRIDGE PROGRAM...</h3>
-            <p style="font-size: 1.5rem; font-weight: 400; margin-bottom: 30px;">STUDENTS READ FASTER with better understanding</p>
-            <p style="font-size: 1.8rem; font-weight: 500;">READING RATE Words-Per-Minute (WPM)</p>
-            <p style="font-size: 1.2rem; margin-top: 30px; font-weight: 300;">At the end of the program, reading rates are more flexible and faster—usually <strong>2 or 3 times higher than the starting rates</strong> with <strong>BETTER COMPREHENSION</strong></p>
-            <p style="font-size: 1.3rem; margin-top: 20px; color: var(--light-blue); font-weight: 400;">This can <strong>CUT STUDY TIME IN HALF</strong> and <strong>RAISE TEST SCORES SUBSTANTIALLY</strong></p>
-        </div>
-    </div>
-</section>
-
-<!-- Continuing Education Section -->
-<section class="history" style="background: var(--light);">
-    <div class="container">
-        <h2 class="section-title">Continuing Education for Teachers</h2>
-        
-        <img src="7contedphoto.png" alt="Children engaged in reading books together" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        
-        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">We create bespoke continuing education programs to address the needs of teachers and their student communities. From training on the latest technology to new pedagogical methods, we help teachers make their classrooms engaging and successful.</p>
-                
-        <div style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
-            <h4 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">University Provost/Parent</h4>
-            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"In addition to our satisfaction from offering the Baldridge program to our college freshman class each year, I believe that it is important to note that this program is suitable for students of all ability levels.</p>
-            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">When my own son was in high school, he was well prepared with a strong academic background and good study habits. But by taking the Baldridge course, he was able to more than double his reading speed and substantially increase his comprehension level as well as do better on his test scores. I can whole heartedly recommend this program for all students."</p>
-        </div>
-    </div>
-</section>
-
-<!-- Community Support Section -->
-<section class="whitehouse">
-    <div class="container">
-        <h2 class="section-title">Support for Communities</h2>
-        
-        <img src="8supportcommun.png" alt="Group of women collaborating on community project" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">An Invitation to Parents: HOW TO HELP YOUR CHILD BECOME A MORE ENTHUSIASTIC LEARNER</h3>
-        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: var(--grey);">Education happens within the context of a larger community. Our approach extends beyond the school to help ensure students have the necessary support to do their best learning.</p>
-                
-        <div style="background: var(--light); padding: 30px; border-radius: 10px; margin-top: 30px;">
-            <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">Mother/Lawyer and Parent of Three Children</h4>
-            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"Quite a few years ago, I took the Baldridge Program in preparation for colleges and it helped both academically and in my target career. I am delighted to let you know three children are now enrolled in the course at Ivy League Universities and our daughter, who is entering the tenth grade this fall has been most enthusiastic about her participation two weeks ago in your program.</p>
-            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">She managed to finish all of the books for her Summer reading list. She adores the miniature dictionary and challenges us regularly with "SAT-type" vocabulary words.</p>
-            <p style="font-size: 1rem; line-height: 1.8; font-weight: 500; margin-top: 15px; color: var(--primary);">Thank you for your much needed service."</p>
-        </div>
-
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 30px; text-align: center; font-weight: 500;">Serving Elite Parents and Scholarly Students</h3>
-            
-        <figure>
-            <figcaption style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px; color: var(--grey); text-align: center;">Baldridge Reading Program Taught thousands of students and graduate Teaching Assistants and Professor Workshops at Johns Hopkins for over 11 years as well as at over 400 Private Schools and Ivy League Colleges.</figcaption>
-            <img src="9jhu.png" alt="Johns Hopkins University campus entrance" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-        </figure>
-            
-        <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 50px; border-radius: 15px; text-align: center;">
-            <h3 style="font-size: 2.2rem; margin-bottom: 30px; line-height: 1.4; font-weight: 500;">"Johns Hopkins Academic Dean for Academic Studies Martha O. Roseman from the office of Academic Advising endorsed the initiation of the Baldridge Reading Program at Hopkins."</h3>
-        </div>
-            
-        <div style="background: var(--light); padding: 40px; border-radius: 10px; margin-top: 60px; border-left: 4px solid var(--accent);">
-            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">For Undermotivated and Challenged Students Who Want to Learn</h3>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">Not every student comes to learning with natural enthusiasm, and that's okay. The Baldridge Program is specifically designed to help undermotivated and challenged students who may feel overwhelmed, disconnected, or simply disengaged—yet deep down want to succeed.</p>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">We understand that frustration with reading and studying can lead to avoidance. Many students aren't lazy or incapable—they're simply challenged by inefficient methods that make learning feel harder than it needs to be. When reading is slow and comprehension is difficult, motivation naturally declines.</p>
-            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge Program breaks this cycle. By teaching practical, proven techniques that deliver <strong>immediate results</strong>, we help students experience success quickly. This success rebuilds confidence, reignites motivation, and transforms the learning experience. Students discover that they <em>can</em> read faster, understand better, and actually enjoy the process—turning reluctance into genuine enthusiasm for learning.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="contact">
-    <div class="container">
-        <h2 class="section-title" style="color: var(--white);">Baldridge Reading and Study Strategy Program Global</h2>
-        
-        <div style="max-width: 800px; margin: 40px auto;">
-            <h3 style="font-size: 1.8rem; margin-bottom: 30px; font-weight: 500;">OFFERING</h3>
-            <div style="margin-bottom: 40px;">
-                <p style="font-size: 1.2rem; font-weight: 300; margin: 20px 0;">* Private 4 hour course (Two 2-Hour Sessions) - Condensed from the 50 years 2-week long course taught at 400+ private and Ivy League colleges and private schools. Available In-Person or on Zoom.</p>
-                <p style="font-size: 1.2rem; font-weight: 300; margin: 20px 0;">* Ongoing Private One on One Tutoring and Mentoring Sessions.</p>
-            </div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>Contact:</strong> <a href="mailto:Vipmediapr@gmail.com">Vipmediapr@gmail.com</a>
+        <!-- Locations -->
+        <section class="section">
+            <div class="container">
+                <h2>A Few Locations of Baldridge Programs</h2>
+                <h3>Private Schools, Universities and Ivy League Colleges</h3>
+                <div class="grid">
+                    <div class="item"><span>ALFRED UNIVERSITY</span>18 years</div>
+                    <div class="item"><span>ALMA COLLEGE</span>19 years</div>
+                    <div class="item"><span>AGNES SCOTT COLLEGE</span>28 years</div>
+                    <div class="item"><span>BARNARD COLLEGE</span></div>
+                    <div class="item"><span>BROWN UNIVERSITY</span>8 years</div>
+                    <div class="item"><span>CAMPBELL UNIVERSITY</span>7 years</div>
+                    <div class="item"><span>CLARKSON UNIVERSITY</span>11 years</div>
+                    <div class="item"><span>COLGATE UNIVERSITY</span>21 years</div>
+                    <div class="item"><span>CONVERSE COLLEGE</span>30 years</div>
+                    <div class="item"><span>DAVIDSON COLLEGE</span>12 years</div>
+                    <div class="item"><span>DREW UNIVERSITY</span>19 years</div>
+                    <div class="item"><span>FURMAN UNIVERSITY</span>12 years</div>
+                    <div class="item"><span>FAIRFIELD UNIVERSITY</span>18 years</div>
+                    <div class="item"><span>GANNON UNIVERSITY</span>21 years</div>
+                    <div class="item"><span>JOHNS HOPKINS UNIVERSITY</span>11 years</div>
+                    <div class="item"><span>KENYON COLLEGE</span>10 years</div>
+                    <div class="item"><span>MILLSAPS COLLEGE</span>8 years</div>
+                    <div class="item"><span>MARIAN COLLEGE</span>21 years</div>
+                    <div class="item"><span>UNIVERSITY OF RICHMOND</span>21 years</div>
+                    <div class="item"><span>WASHINGTON & JEFFERSON COLLEGE</span>18 years</div>
+                    <div class="item"><span>WILLIAMS COLLEGE</span>7 years</div>
+                    <div class="item"><span>WOFFORD COLLEGE</span>16 years</div>
+                    <div class="item"><span>WORCESTER POLYTECHNIC INSTITUTE</span>13 years</div>
+                    <div class="item"><span>YALE UNIVERSITY</span>3 years</div>
+                    <div class="item"><span>HAMDEN HALL</span></div>
+                    <div class="item"><span>FAIRFIELD UNIVERSITY</span></div>
                 </div>
-                <div class="contact-item">
-                    for Pricing and Enrollment.
+                <h3>Lower School, High School, College, and Professionals</h3>
+                <p>Programs conducted at more than 400 schools, colleges and business organizations.</p>
+            </div>
+        </section>
+
+        <!-- History -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>BRSS, Inc. Est. 1956</h2>
+                <img src="2brss1956.png" alt="Founding meeting in Greenwich, CT, 1956" loading="lazy">
+                <p>In Greenwich, Connecticut Since 1956. Baldridge Reading President Kenneth P. Baldridge and Staff from Ivy League Universities.</p>
+                <p>Clifford P. Baldridge continues the Family Legacy as Co-Director of Baldridge Reading, operating out of the West Coast Branch with Offices in Beverly Hills, Santa Monica, Malibu, Santa Barbara and offering remote learning services.</p>
+            </div>
+        </section>
+
+        <!-- Offering -->
+        <section class="section">
+            <div class="container">
+                <h2>Offering</h2>
+                <div class="grid">
+                    <div class="item">
+                        <h3>4 Hour Course (Two 2-Hour Sessions)</h3>
+                        <p>Condensed from the 50-year, 2-week course taught at 400+ private and Ivy League schools. Available In-Person or on Zoom.</p>
+                    </div>
+                    <div class="item">
+                        <h3>Ongoing Private Tutoring</h3>
+                        <p>Private One-on-One Tutoring and Mentoring Sessions after course completion.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 20px;"><strong>Contact:</strong> <a href="mailto:Vipmediapr@gmail.com">Vipmediapr@gmail.com</a> for Pricing and Enrollment.</p>
+            </div>
+        </section>
+
+        <!-- White House -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>Baldridge Program Taught at The White House</h2>
+                <img src="3whitehouse.png" alt="The White House" loading="lazy">
+                <p>The Baldridge's were invited to teach the President's Staff, refining the filtering of White House Mail and Global Intelligence, revising the President's Daily Brief (PDB).</p>
+                <blockquote style="margin: 20px 0; font-style: italic; color: var(--grey);">
+                    “We greatly appreciate the program conducted by your staff. It was professionally conducted, your instructors were outstanding and the participants' remarks have been very complimentary in every way.”<br>
+                    — <strong>Landon Kite, Director of Correspondence, The White House</strong>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="section">
+            <div class="container">
+                <h2>You Can Save Time Reading and Studying</h2>
+                <p>by enrolling in the Baldridge Program</p>
+                <img src="4tablet.png" alt="Young student using tablet" loading="lazy">
+                <div class="benefit">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Increased Speed</h3>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">✓</div>
+                    <h3>Better Comprehension</h3>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">📈</div>
+                    <h3>Higher Test Scores</h3>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🧠</div>
+                    <h3>Greater Retention</h3>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Stronger Concentration</h3>
+                </div>
+                <p>After the BALDRIDGE PROGRAM...<br><strong>STUDENTS READ FASTER with better understanding.</strong></p>
+                <p>Reading rates are more flexible and faster—usually <strong>2 or 3 times higher</strong> with <strong>BETTER COMPREHENSION</strong>.</p>
+                <p>This can <strong>CUT STUDY TIME IN HALF</strong> and <strong>RAISE TEST SCORES SUBSTANTIALLY</strong>.</p>
+            </div>
+        </section>
+
+        <!-- For Scholarly Students -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>For Scholarly Students</h2>
+                <p>The Baldridge Program is tailored to each student’s needs. Students apply techniques to their own reading material — textbooks, academic papers, and pleasure reading.</p>
+                <p>Students create specific learning strategies for each course, including:</p>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Physical Sciences</li>
+                    <li>English Literature</li>
+                    <li>Foreign Languages</li>
+                    <li>Cross-Curriculum Applications</li>
+                </ul>
+                <p>Improvement is immediate and long-range. The program establishes reading and study skills on a permanent basis.</p>
+            </div>
+        </section>
+
+        <!-- For Challenged Students -->
+        <section class="section">
+            <div class="container">
+                <h2>For Challenged Students Who Want to Learn</h2>
+                <p>Not every student comes to learning with natural enthusiasm — and that’s okay.</p>
+                <p>The Baldridge Program helps undermotivated and challenged students who feel overwhelmed or disengaged — yet deep down want to succeed.</p>
+                <p>By teaching proven techniques that deliver <strong>immediate results</strong>, students experience success quickly. This rebuilds confidence, reignites motivation, and transforms the learning experience.</p>
+            </div>
+        </section>
+
+        <!-- For Parents -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>An Invitation to Parents</h2>
+                <p><strong>HOW TO HELP YOUR CHILD BECOME A MORE ENTHUSIASTIC LEARNER</strong></p>
+                <p>Education happens within the context of a larger community. Our approach extends beyond the school to ensure students have the support they need.</p>
+                <p>The Baldridge Program includes:</p>
+                <ul>
+                    <li>Parent workshop included</li>
+                    <li>Extra-help sessions at no charge</li>
+                    <li>Program tailored to each student’s needs</li>
+                </ul>
+                <p>Students who enroll have the option of repeating the program without charge.</p>
+            </div>
+        </section>
+
+        <!-- What Students Say -->
+        <section class="section">
+            <div class="container">
+                <h2>What Students Say</h2>
+                <div class="quote">
+                    <p>"I don't waste time daydreaming anymore. I can concentrate much longer when studying so I don't have to cram for tests now."</p>
+                    <cite>Social Studies</cite>
+                </div>
+                <div class="quote">
+                    <p>"As which makes me happy."</p>
+                    <cite>History</cite>
+                </div>
+                <div class="quote">
+                    <p>"Memorizing facts is easier and faster. Quiz grades are up."</p>
+                    <cite>Science</cite>
+                </div>
+                <div class="quote">
+                    <p>"Math word problems are easier to understand and solve."</p>
+                    <cite>Math</cite>
+                </div>
+                <div class="quote">
+                    <p>"Not boring anymore. I actually enjoy reading it now."</p>
+                    <cite>English</cite>
+                </div>
+                <div class="quote">
+                    <p>"Translations are easier and faster. Vocabulary memory techniques helped a lot."</p>
+                    <cite>French</cite>
+                </div>
+                <div class="quote">
+                    <p>"The Baldridge Ten Key Test Tips gave me confidence and raised my SAT test scores."</p>
+                    <cite>Test-Taking</cite>
                 </div>
             </div>
+        </section>
 
-            <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2);">
-                <h4 style="font-size: 1.3rem; margin-bottom: 15px; font-weight: 500;">West Coast Branch</h4>
-                <p style="font-size: 1.1rem; font-weight: 300;">Beverly Hills, Santa Monica, Malibu, Santa Barbara, California and Remote Worldwide.</p>
-                <p style="font-size: 1rem; margin-top: 20px; font-weight: 300;">Enrollment Contact: <a href="mailto:vipmediapr@gmail.com" style="color: var(--light-blue);">vipmediapr@gmail.com</a></p>
+        <!-- Parent Testimonials -->
+        <section class="section" style="background: var(--light);">
+            <div class="container">
+                <h2>Parent Testimonials</h2>
+                <div class="quote">
+                    <p>"Our three children each enrolled in the Baldridge Program at a different age: Jim this summer, before entering 6th grade; Paul a few years ago, before entering 9th grade; and Mary last summer, preceding her senior year in high school. They have all benefited greatly. Jim's improved learning and organizational skills have enabled him to become much more confident, efficient and independent as he prepares to enter the sixth grade."</p>
+                    <cite>Parents of Three Children</cite>
+                </div>
+                <div class="quote">
+                    <p>"In addition to our satisfaction from offering the Baldridge program to our college freshman class each year, I believe that it is important to note that this program is suitable for students of all ability levels. When my own son was in high school, he was well prepared with a strong academic background and good study habits. But by taking the Baldridge course, he was able to more than double his reading speed and substantially increase his comprehension level."</p>
+                    <cite>University Provost/Parent</cite>
+                </div>
+                <div class="quote">
+                    <p>"Quite a few years ago, I took the Baldridge Program for college and it helped both academically and in my legal career. I am delighted to let you know three children are now enrolled in the course at Ivy League Universities and our daughter, who is entering the tenth grade this fall has been most enthusiastic about her participation two weeks ago in your program."</p>
+                    <cite>Mother/Lawyer</cite>
+                </div>
             </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p><strong>West Coast Branch:</strong> Beverly Hills, Santa Monica, Malibu, Santa Barbara, CA and Remote Worldwide</p>
+                <p><strong>Email:</strong> <a href="mailto:Vipmediapr@gmail.com">Vipmediapr@gmail.com</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 30px 10px; font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2025-2026 Baldridge Reading. All Rights Reserved.</p>
+            <p>No reproduction of this website content is allowed without written permission.</p>
         </div>
-    </div>
-</section>
+    </footer>
 
-</main>
-<!-- End Main Content -->
-
-<!-- Footer -->
-<footer role="contentinfo">
-    <div class="container">
-        <p>&copy; 2025-2026 Baldridge Reading. Baldridge Speed Reading and Study Strategy Program, Baldridge Reading Program, Cliff Baldridge, Et al.</p>
-        <p>All Rights Reserved. No reproduction of this website content is allowed in any form of media now or created in the future without expressed written permission.</p>
-        <p style="margin-top: 20px; font-size: 0.85rem;">All material appearing on this website ("content") is protected by copyright under U.S. Copyright laws and is the property of Baldridge Reading, Cliff Baldridge or the party credited as the provider of the content. You may not copy, reproduce, distribute, publish, display, perform, modify, create derivative works, transmit, or in any way exploit any such content, nor may you distribute any part of this content over any network, including a local area network, sell or offer it for sale, or use such content to construct any kind of database.</p>
-    </div>
-</footer>
-
-<script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
+    <script>
+        document.querySelector('.scroll-btn').addEventListener('click', () => {
+            window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
         });
-    });
-
-    // Scroll indicator click
-    document.querySelector('.scroll-indicator').addEventListener('click', function() {
-        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    });
-</script></body>
+    </script>
+</body>
 </html>
 
