@@ -507,6 +507,18 @@
         .section-title {
             font-size: 2rem;
         }
+
+        .offering-grid, .benefits-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .history-content, .testimonials > .container > div[style*="grid-template-columns"], .whitehouse > .container > div[style*="grid-template-columns"] {
+            grid-template-columns: 1fr;
+        }
+
+        .benefit-card {
+            max-width: 100%;
+        }
     }
 </style></head>
 <body>
@@ -661,10 +673,8 @@
 
 <!-- History Section -->
 <section class="history">
-    <div class="history-content">
-        <div>
-            <img src="2brss1956.png" alt="Baldridge Reading Services founding meeting in Greenwich Connecticut, 1956" class="history-image" loading="lazy">
-        </div>
+    <div class="container">
+        <img src="2brss1956.png" alt="Baldridge Reading Services founding meeting in Greenwich Connecticut, 1956" class="history-image" loading="lazy">
         <div class="history-text">
             <h2>BRSS, Inc. Est. 1956</h2>
             <p>In Greenwich, Connecticut Since 1956. Baldridge Reading President Kenneth P. Baldridge and Staff from Ivy League Universities.</p>
@@ -678,11 +688,11 @@
     <div class="container">
         <h2 class="section-title">OFFERING</h2>
         <div class="offering-grid">
-            <div class="offering-card" style="--i: 1">
+            <div class="offering-card">
                 <h3>4 Hour Course (Two 2-Hour Sessions)</h3>
                 <p>Condensed from the 50 years 2-week long course taught at 400+ private and Ivy League colleges and private schools. Available In-Person or on Zoom.</p>
             </div>
-            <div class="offering-card" style="--i: 2">
+            <div class="offering-card">
                 <h3>Ongoing Private Tutoring</h3>
                 <p>Private One on One Tutoring and Mentoring Sessions after course completion.</p>
             </div>
@@ -723,30 +733,28 @@
     <div class="container">
         <h2 class="section-title">You have a special opportunity to enroll in A Reading Skill Program Which is MORE Than Speed Reading.</h2>
         
-        <div style="max-width: 1100px; margin: 60px auto;">
-            <img src="4tablet.png" alt="Young student engaged in learning with a tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-            
-            <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
-                <div class="benefit-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Higher Test Scores</h3>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Greater Retention</h3>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Increased Speed</h3>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">✓</div>
-                    <h3>Better Comprehension</h3>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon"></div>
-                    <h3>Stronger Concentration</h3>
-                </div>
+        <img src="4tablet.png" alt="Young student engaged in learning with a tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        
+        <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Higher Test Scores</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Greater Retention</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Increased Speed</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">✓</div>
+                <h3>Better Comprehension</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Stronger Concentration</h3>
             </div>
         </div>
 
@@ -780,17 +788,12 @@
     <div class="container">
         <h2 class="section-title">Limited Enrollment Opportunities for High Achieving Students Motivated to Learn from 3rd Grade - 12th, College Students and Professional Adults.</h2>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 60px auto;">
-            <div>
-                <img src="5parents.png" alt="Group of adult learners in classroom setting" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);" loading="lazy">
-            </div>
-            <div>
-                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">Baldridge Reading and Study Strategy Programs have been taught by the Baldridge staff in more than 400 schools, colleges and business organizations.</p>
+        <img src="5parents.png" alt="Group of adult learners in classroom setting" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        
+        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">Baldridge Reading and Study Strategy Programs have been taught by the Baldridge staff in more than 400 schools, colleges and business organizations.</p>
                 
-                <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge Program Conducted at The White House</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge's were invited to The White House. The Baldridge Program was taught at The White House for the President's Staff refining the collection and filtering of all White House Mail and all Global Intelligence, revising the President's Daily Brief. The PDB is a top-secret document produced and given each morning to POTUS, The President of the United States.</p>
-            </div>
-        </div>
+        <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge Program Conducted at The White House</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge's were invited to The White House. The Baldridge Program was taught at The White House for the President's Staff refining the collection and filtering of all White House Mail and all Global Intelligence, revising the President's Daily Brief. The PDB is a top-secret document produced and given each morning to POTUS, The President of the United States.</p>
     </div>
 </section>
 
@@ -799,40 +802,35 @@
     <div class="container">
         <h2 class="section-title">Why students, parents and families have been pleased with their decision to take the Baldridge Program</h2>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 60px auto;">
-            <div>
-                <img src="6studentsparents.png" alt="Parents helping child with learning on tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);" loading="lazy">
-            </div>
-            <div>
-                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">The Baldridge Program is especially tailored to respond to each student's specific interests and needs.</p>
+        <img src="6studentsparents.png" alt="Parents helping child with learning on tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        
+        <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">The Baldridge Program is especially tailored to respond to each student's specific interests and needs.</p>
                 
-                <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge offers much more than simply "speed reading."</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 15px; color: var(--grey);">In addition to reading faster, students learn to:</p>
+        <h3 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Baldridge offers much more than simply "speed reading."</h3>
+        <p style="font-size: 1.1rem; margin-bottom: 15px; color: var(--grey);">In addition to reading faster, students learn to:</p>
                 
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                        Prepare for tests in a more thorough and organized way which improves retention.
-                    </li>
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                        Budget study time more wisely.
-                    </li>
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                        Organize lecture notes better.
-                    </li>
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                        Organize material for term papers.
-                    </li>
-                    <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
-                        <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
-                        Derive more satisfaction from reading.
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
+                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+                Prepare for tests in a more thorough and organized way which improves retention.
+            </li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
+                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+                Budget study time more wisely.
+            </li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
+                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+                Organize lecture notes better.
+            </li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
+                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+                Organize material for term papers.
+            </li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; font-size: 1.05rem; color: var(--grey);">
+                <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">✓</span>
+                Derive more satisfaction from reading.
+            </li>
+        </ul>
 
         <div style="background: var(--primary); color: var(--white); padding: 60px 40px; border-radius: 15px; max-width: 900px; margin: 60px auto; text-align: center;">
             <h3 style="font-size: 2rem; margin-bottom: 20px; font-weight: 500;">After the BALDRIDGE PROGRAM...</h3>
@@ -849,19 +847,14 @@
     <div class="container">
         <h2 class="section-title">Continuing Education for Teachers</h2>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 60px auto;">
-            <div>
-                <img src="7contedphoto.png" alt="Children engaged in reading books together" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);" loading="lazy">
-            </div>
-            <div>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">We create bespoke continuing education programs to address the needs of teachers and their student communities. From training on the latest technology to new pedagogical methods, we help teachers make their classrooms engaging and successful.</p>
+        <img src="7contedphoto.png" alt="Children engaged in reading books together" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">We create bespoke continuing education programs to address the needs of teachers and their student communities. From training on the latest technology to new pedagogical methods, we help teachers make their classrooms engaging and successful.</p>
                 
-                <div style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
-                    <h4 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">University Provost/Parent</h4>
-                    <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"In addition to our satisfaction from offering the Baldridge program to our college freshman class each year, I believe that it is important to note that this program is suitable for students of all ability levels.</p>
-                    <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">When my own son was in high school, he was well prepared with a strong academic background and good study habits. But by taking the Baldridge course, he was able to more than double his reading speed and substantially increase his comprehension level as well as do better on his test scores. I can whole heartedly recommend this program for all students."</p>
-                </div>
-            </div>
+        <div style="background: var(--white); padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--accent);">
+            <h4 style="font-size: 1.3rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">University Provost/Parent</h4>
+            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"In addition to our satisfaction from offering the Baldridge program to our college freshman class each year, I believe that it is important to note that this program is suitable for students of all ability levels.</p>
+            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">When my own son was in high school, he was well prepared with a strong academic background and good study habits. But by taking the Baldridge course, he was able to more than double his reading speed and substantially increase his comprehension level as well as do better on his test scores. I can whole heartedly recommend this program for all students."</p>
         </div>
     </div>
 </section>
@@ -871,41 +864,34 @@
     <div class="container">
         <h2 class="section-title">Support for Communities</h2>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 60px auto;">
-            <div>
-                <img src="8supportcommun.png" alt="Group of women collaborating on community project" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);" loading="lazy">
-            </div>
-            <div>
-                <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">An Invitation to Parents: HOW TO HELP YOUR CHILD BECOME A MORE ENTHUSIASTIC LEARNER</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: var(--grey);">Education happens within the context of a larger community. Our approach extends beyond the school to help ensure students have the necessary support to do their best learning.</p>
+        <img src="8supportcommun.png" alt="Group of women collaborating on community project" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        
+        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">An Invitation to Parents: HOW TO HELP YOUR CHILD BECOME A MORE ENTHUSIASTIC LEARNER</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: var(--grey);">Education happens within the context of a larger community. Our approach extends beyond the school to help ensure students have the necessary support to do their best learning.</p>
                 
-                <div style="background: var(--light); padding: 30px; border-radius: 10px; margin-top: 30px;">
-                    <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">Mother/Lawyer and Parent of Three Children</h4>
-                    <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"Quite a few years ago, I took the Baldridge Program in preparation for colleges and it helped both academically and in my target career. I am delighted to let you know three children are now enrolled in the course at Ivy League Universities and our daughter, who is entering the tenth grade this fall has been most enthusiastic about her participation two weeks ago in your program.</p>
-                    <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">She managed to finish all of the books for her Summer reading list. She adores the miniature dictionary and challenges us regularly with "SAT-type" vocabulary words.</p>
-                    <p style="font-size: 1rem; line-height: 1.8; font-weight: 500; margin-top: 15px; color: var(--primary);">Thank you for your much needed service."</p>
-                </div>
-            </div>
+        <div style="background: var(--light); padding: 30px; border-radius: 10px; margin-top: 30px;">
+            <h4 style="font-size: 1.2rem; color: var(--primary); margin-bottom: 15px; font-weight: 500;">Mother/Lawyer and Parent of Three Children</h4>
+            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; color: var(--grey);">"Quite a few years ago, I took the Baldridge Program in preparation for colleges and it helped both academically and in my target career. I am delighted to let you know three children are now enrolled in the course at Ivy League Universities and our daughter, who is entering the tenth grade this fall has been most enthusiastic about her participation two weeks ago in your program.</p>
+            <p style="font-size: 1rem; line-height: 1.8; font-style: italic; margin-top: 15px; color: var(--grey);">She managed to finish all of the books for her Summer reading list. She adores the miniature dictionary and challenges us regularly with "SAT-type" vocabulary words.</p>
+            <p style="font-size: 1rem; line-height: 1.8; font-weight: 500; margin-top: 15px; color: var(--primary);">Thank you for your much needed service."</p>
         </div>
 
-        <div style="max-width: 900px; margin: 80px auto;">
-            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 30px; text-align: center; font-weight: 500;">Serving Elite Parents and Scholarly Students</h3>
+        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 30px; text-align: center; font-weight: 500;">Serving Elite Parents and Scholarly Students</h3>
             
-            <figure>
-                <figcaption style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px; color: var(--grey); text-align: center;">Baldridge Reading Program Taught thousands of students and graduate Teaching Assistants and Professor Workshops at Johns Hopkins for over 11 years as well as at over 400 Private Schools and Ivy League Colleges.</figcaption>
-                <img src="9jhu.png" alt="Johns Hopkins University campus entrance" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-            </figure>
+        <figure>
+            <figcaption style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px; color: var(--grey); text-align: center;">Baldridge Reading Program Taught thousands of students and graduate Teaching Assistants and Professor Workshops at Johns Hopkins for over 11 years as well as at over 400 Private Schools and Ivy League Colleges.</figcaption>
+            <img src="9jhu.png" alt="Johns Hopkins University campus entrance" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
+        </figure>
             
-            <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 50px; border-radius: 15px; text-align: center;">
-                <h3 style="font-size: 2.2rem; margin-bottom: 30px; line-height: 1.4; font-weight: 500;">"Johns Hopkins Academic Dean for Academic Studies Martha O. Roseman from the office of Academic Advising endorsed the initiation of the Baldridge Reading Program at Hopkins."</h3>
-            </div>
+        <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); padding: 50px; border-radius: 15px; text-align: center;">
+            <h3 style="font-size: 2.2rem; margin-bottom: 30px; line-height: 1.4; font-weight: 500;">"Johns Hopkins Academic Dean for Academic Studies Martha O. Roseman from the office of Academic Advising endorsed the initiation of the Baldridge Reading Program at Hopkins."</h3>
+        </div>
             
-            <div style="background: var(--light); padding: 40px; border-radius: 10px; margin-top: 60px; border-left: 4px solid var(--accent);">
-                <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">For Undermotivated and Challenged Students Who Want to Learn</h3>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">Not every student comes to learning with natural enthusiasm, and that's okay. The Baldridge Program is specifically designed to help undermotivated and challenged students who may feel overwhelmed, disconnected, or simply disengaged—yet deep down want to succeed.</p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">We understand that frustration with reading and studying can lead to avoidance. Many students aren't lazy or incapable—they're simply challenged by inefficient methods that make learning feel harder than it needs to be. When reading is slow and comprehension is difficult, motivation naturally declines.</p>
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge Program breaks this cycle. By teaching practical, proven techniques that deliver <strong>immediate results</strong>, we help students experience success quickly. This success rebuilds confidence, reignites motivation, and transforms the learning experience. Students discover that they <em>can</em> read faster, understand better, and actually enjoy the process—turning reluctance into genuine enthusiasm for learning.</p>
-            </div>
+        <div style="background: var(--light); padding: 40px; border-radius: 10px; margin-top: 60px; border-left: 4px solid var(--accent);">
+            <h3 style="font-size: 1.6rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">For Undermotivated and Challenged Students Who Want to Learn</h3>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">Not every student comes to learning with natural enthusiasm, and that's okay. The Baldridge Program is specifically designed to help undermotivated and challenged students who may feel overwhelmed, disconnected, or simply disengaged—yet deep down want to succeed.</p>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey); margin-bottom: 15px;">We understand that frustration with reading and studying can lead to avoidance. Many students aren't lazy or incapable—they're simply challenged by inefficient methods that make learning feel harder than it needs to be. When reading is slow and comprehension is difficult, motivation naturally declines.</p>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--grey);">The Baldridge Program breaks this cycle. By teaching practical, proven techniques that deliver <strong>immediate results</strong>, we help students experience success quickly. This success rebuilds confidence, reignites motivation, and transforms the learning experience. Students discover that they <em>can</em> read faster, understand better, and actually enjoy the process—turning reluctance into genuine enthusiasm for learning.</p>
         </div>
     </div>
 </section>
