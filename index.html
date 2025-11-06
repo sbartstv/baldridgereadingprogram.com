@@ -77,30 +77,13 @@
         overflow: hidden;
     }
 
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(44, 62, 80, 0.88), rgba(52, 152, 219, 0.85));
-        z-index: 1;
-    }
-
     .hero-bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        animation: zoomIn 20s ease-in-out infinite alternate;
-    }
-
-    @keyframes zoomIn {
-        0% { transform: scale(1); }
-        100% { transform: scale(1.1); }
+        object-fit: contain;
     }
 
     .hero-content {
@@ -532,10 +515,8 @@
 
 <!-- Hero Section -->
 <section class="hero" role="banner" aria-label="Welcome banner">
-    <img src="1tugofwar.png" alt="Students engaged in tug of war, demonstrating teamwork and effort" class="hero-bg" loading="lazy">
+    <img src="1tugofwar.png" alt="Students engaged in tug of war, demonstrating teamwork and effort. Empowering parents, higher educational leadership and students for a brighter future. Supporting education and innovation worldwide. A Few Locations Of Baldridge Programs: Alfred University 16 years, Alma College 19 years, Agnes Scott College 26 years, Brown University 9 years, Campbell University 7 years, Clarkson University 11 years, Colgate University 21 years, Converse College 20 years, Davidson College 12 years, Drew University 16 years, Furman University 12 years, Fairfield University 16 years, Gannon University 21 years, Johns Hopkins University 11 years, Kenyon College 10 years, Millsaps College 5 years, Ripon College 21 years, University of Richmond 21 years, Washington & Jefferson College 18 years, Williams College 7 years, Wofford College 16 years, Worcester Polytechnic Institute 13 years, Yale University 3 years." class="hero-bg" loading="lazy">
     <div class="hero-content">
-        <h1>Empowering parents, higher educational leadership and students for a brighter future.</h1>
-        <p class="hero-subtitle">Supporting education and innovation worldwide.</p>
     </div>
     <button class="scroll-indicator" aria-label="Scroll to next section" tabindex="0"></button>
 </section>
@@ -742,38 +723,39 @@
     <div class="container">
         <h2 class="section-title">You have a special opportunity to enroll in A Reading Skill Program Which is MORE Than Speed Reading.</h2>
         
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1100px; margin: 60px auto;">
+        <div style="max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; align-items: start;">
+            <!-- First row: Increased Speed left, Better Comprehension right -->
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Increased Speed</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">✓</div>
+                <h3>Better Comprehension</h3>
+            </div>
+            
+            <!-- Second row: Image left, Higher Test Scores right -->
             <div>
                 <img src="4tablet.png" alt="Young student engaged in learning with a tablet" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15);" loading="lazy">
             </div>
-            <div>
-                <div class="benefits-grid" style="grid-template-columns: 1fr;">
-                    <div class="benefit-card">
-                        <div class="benefit-icon"></div>
-                        <h3>Higher Test Scores</h3>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"></div>
-                        <h3>Greater Retention</h3>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"></div>
-                        <h3>Increased Speed</h3>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon">✓</div>
-                        <h3>Better Comprehension</h3>
-                    </div>
-                    <div class="benefit-card">
-                        <div class="benefit-icon"></div>
-                        <h3>Stronger Concentration</h3>
-                    </div>
-                </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Higher Test Scores</h3>
+            </div>
+            
+            <!-- Remaining benefits in a third row -->
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Greater Retention</h3>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon"></div>
+                <h3>Stronger Concentration</h3>
             </div>
         </div>
 
-        <div style="max-width: 900px; margin: 60px auto; text-align: center;">
-            <h3 style="font-size: 2rem; margin-bottom: 30px; font-weight: 500;">You Can Save Time Reading and Studying by enrolling in the Baldridge Program</h3>
+        <div style="max-width: 900px; margin: 40px auto; text-align: center;">
+            <h3 style="font-size: 2rem; margin-bottom: 20px; font-weight: 500;">You Can Save Time Reading and Studying by enrolling in the Baldridge Program</h3>
             <p style="font-size: 1.2rem; line-height: 1.8; font-weight: 300;">You learn reading techniques IN YOUR OWN BOOKS, using textbooks and other academic reading as well as your personal reading material for enjoyment.</p>
         </div>
     </div>
