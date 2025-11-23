@@ -68,7 +68,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            height: 100vh;
+            height: auto; /* Changed to auto to prevent cropping */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -78,19 +78,19 @@
         }
 
         .hero-bg {
-            position: absolute;
+            position: relative; /* Changed from absolute to relative for full display */
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Changed to cover for better mobile fit */
+            height: auto; /* Allow full height */
+            object-fit: contain; /* Reverted to contain to show full image without cropping */
         }
 
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 900px;
-            padding: 0 20px;
+            padding: 20px;
             animation: fadeInUp 1s ease-out;
         }
 
@@ -193,7 +193,7 @@
 
         @media (max-width: 768px) {
             .hero {
-                height: 60vh; /* Reduced height for mobile to show more content */
+                height: auto; /* Auto height for mobile */
             }
 
             .hero h1 {
@@ -635,12 +635,15 @@
     <!-- Hero Section -->
     <section class="hero" role="banner" aria-label="Welcome banner">
         <img src="1tugofwar.png" alt="Students engaged in tug of war, demonstrating teamwork and effort. Empowering parents, higher educational leadership and students for a brighter future. Supporting education and innovation worldwide. A Few Locations Of Baldridge Programs: Alfred University 19 years, Alma College 22 years, Agnes Scott College 29 years, Brown University 6 years, Campbell University 10 years, Clarkson University 14 years, Colgate University 24 years, Converse College 23 years, Davidson College 15 years, Drew University 19 years, Furman University 14 years, Fairfield University 13 years, Gannon University 8 years, Johns Hopkins University 24 years, Kenyon College 10 years, Millsaps College 14 years, Ripon College 24 years, University of Richmond 21 years, Washington & Jefferson College 22 years, Williams College 10 years, Wofford College 19 years, Worcester Polytechnic Institute 16 years, Yale University 3 years." class="hero-bg" loading="lazy">
-        <div class="hero-content">
-            <!-- Added visible text from alt for better UX, hidden on desktop if needed, but shown here -->
-            <h1>Baldridge Reading Program</h1>
-            <p class="hero-subtitle">Empowering Education Worldwide</p>
-        </div>
         <button class="scroll-indicator" aria-label="Scroll to next section" tabindex="0"></button>
+    </section>
+
+    <!-- Hero Content Moved Here -->
+    <section style="background: var(--light); padding: 20px 20px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; color: var(--primary); font-weight: 500;">Baldridge Reading Program</h1>
+            <p style="font-size: 1.8rem; color: var(--grey); font-weight: 300;">Empowering Education Worldwide</p>
+        </div>
     </section>
 
     <!-- Welcome Message -->
@@ -1249,20 +1252,11 @@
                     <p style="font-size: 1.2rem; font-weight: 300; margin: 20px 0;">* Private 4 hour course (Two 2-Hour Sessions) - Condensed from the 50 years 2-week long course taught at 400+ private and Ivy League colleges and private schools. Available In-Person or on Zoom.</p>
                     <p style="font-size: 1.2rem; font-weight: 300; margin: 20px 0;">* Ongoing Private One on One Tutoring and Mentoring Sessions.</p>
                 </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Contact:</strong> <a href="mailto:Vipmediapr@gmail.com">Vipmediapr@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        for Pricing and Enrollment.
-                    </div>
-                </div>
 
                 <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2);">
                     <h4 style="font-size: 1.3rem; margin-bottom: 15px; font-weight: 500;">West Coast Branch</h4>
                     <p style="font-size: 1.1rem; font-weight: 300;">Beverly Hills, Santa Monica, Malibu, Santa Barbara, California and Remote Worldwide.</p>
-                    <p style="font-size: 1rem; margin-top: 20px; font-weight: 300;">Enrollment Contact: <a href="mailto:vipmediapr@gmail.com" style="color: var(--light-blue);">vipmediapr@gmail.com</a></p>
+                    <p style="font-size: 1rem; margin-top: 20px; font-weight: 300;">Enrollment Contact: <a href="mailto:vipmediapr@gmail.com" style="color: var(--light-blue);">vipmediapr@gmail.com</a> for Pricing and Enrollment.</p>
                 </div>
             </div>
         </div>
