@@ -151,6 +151,48 @@
             color: var(--white);
         }
 
+        /* Navigation */
+        .main-nav {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .main-nav li {
+            margin: 0 15px;
+        }
+
+        .main-nav a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .main-nav a:hover {
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                flex-direction: column;
+            }
+
+            .main-nav li {
+                margin: 10px 0;
+            }
+        }
+
         /* Universities Section */
         .universities {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -509,11 +551,51 @@
                 font-size: 2rem;
             }
         }
+
+        /* Testimonials Section Styles */
+        .testimonial-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .testimonial-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-transcript {
+            font-style: italic;
+            color: var(--grey);
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
     <!-- Skip to main content for keyboard users -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#welcome">Welcome</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#offering">Offering</a></li>
+            <li><a href="#whitehouse">White House</a></li>
+            <li><a href="#international">International Excellence</a></li>
+            <li><a href="#testimonials-lower">Lower School Testimonials</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#stats">Who Can Benefit</a></li>
+            <li><a href="#testimonials-college">College Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" role="banner" aria-label="Welcome banner">
@@ -524,7 +606,7 @@
     </section>
 
     <!-- Welcome Message -->
-    <section style="background: var(--light); padding: 60px 20px; text-align: center;">
+    <section id="welcome" style="background: var(--light); padding: 60px 20px; text-align: center;">
         <div class="container">
             <h1 style="font-size: 2.5rem; color: var(--primary); font-weight: 500;">Welcome to the Baldridge Speed Reading and Study Strategy Program Website</h1>
         </div>
@@ -534,7 +616,7 @@
     <main id="main-content">
 
     <!-- Universities Section -->
-    <section class="universities" aria-labelledby="universities-heading">
+    <section id="locations" class="universities" aria-labelledby="universities-heading">
         <div class="container">
             <h2 class="section-title" id="universities-heading">A Few Locations Of Baldridge Programs</h2>
             <p>Lower School, High School, College, and Professionals Programs conducted at more than 400 schools, colleges and business organizations.</p>
@@ -719,7 +801,7 @@
     </section>
 
     <!-- History Section -->
-    <section class="history">
+    <section id="history" class="history">
         <div class="history-content">
             <img src="2brss1956.png" alt="Baldridge Reading Services founding meeting in Greenwich Connecticut, 1956" class="history-image" loading="lazy">
             <div class="history-text">
@@ -731,7 +813,7 @@
     </section>
 
     <!-- Offering Section -->
-    <section class="offering">
+    <section id="offering" class="offering">
         <div class="container">
             <h2 class="section-title">OFFERING</h2>
             <div class="offering-grid">
@@ -745,14 +827,13 @@
                 </div>
             </div>
             <div class="contact-info" style="margin-top: 50px; text-align: center;">
-                <p style="font-size: 1.3rem; color: var(--primary); font-weight: 500;"><strong>Contact: Vipmediapr@gmail.com</strong></p>
-                <p style="font-size: 1.1rem; color: var(--grey);">for Pricing and Enrollment.</p>
+                <p style="font-size: 1.3rem; color: var(--primary); font-weight: 500;"><strong>Contact for Pricing and Enrollment.</strong></p>
             </div>
         </div>
     </section>
 
     <!-- White House Section -->
-    <section class="whitehouse">
+    <section id="whitehouse" class="whitehouse">
         <div class="container">
             <h2 class="section-title">Baldridge Reading Program Taught at The White House</h2>
             <img src="3whitehouse.png" alt="The White House, Washington DC" class="whitehouse-image" loading="lazy">
@@ -775,8 +856,80 @@
         </div>
     </section>
 
+    <!-- Lower School Testimonials Section -->
+    <section id="testimonials-lower" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Reference Letters and Student Comments - Lower and Middle Schools</h2>
+
+            <!-- Deans Letters (3 selected for lower schools) -->
+            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Deans' Recommendations</h3>
+
+            <!-- Hampton Roads Academy Dean -->
+            <div class="testimonial-item">
+                <img src="hampton_roads_dean.jpg" alt="Letter from Hampton Roads Academy Dean" loading="lazy">
+                <p class="testimonial-transcript">Transcribed text of the letter if needed, but since typed, image is sufficient.</p>
+            </div>
+
+            <!-- Jackson Academy Dean -->
+            <div class="testimonial-item">
+                <img src="jackson_academy_dean.jpg" alt="Letter from Jackson Academy Dean" loading="lazy">
+                <p class="testimonial-transcript">Transcribed text if needed.</p>
+            </div>
+
+            <!-- Episcopal High School Director -->
+            <div class="testimonial-item">
+                <img src="episcopal_high_dean.jpg" alt="Letter from Episcopal High School Director" loading="lazy">
+                <p class="testimonial-transcript">Transcribed text if needed.</p>
+            </div>
+
+            <!-- Student Comments (3 selected for lower/middle schools) -->
+            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Student Comments</h3>
+
+            <!-- Waldorf Student -->
+            <div class="testimonial-item">
+                <img src="student_waldorf_7-18-90.jpg" alt="Student comment from Waldorf School" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Waldorf, Date: 7/18/90<br>
+                    1. Starting 190 wpm. After warm up went up to 230 wpm. I raced my self and got up to 390 wpm I feel comfortable at 230 wpm :)<br>
+                    6. I have learned alot about reading and he did a great job of teaching!
+                </p>
+            </div>
+
+            <!-- Marin Waldorf Student -->
+            <div class="testimonial-item">
+                <img src="student_marin_waldorf_9-3-94.jpg" alt="Student comment from Marin Waldorf School" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Marin Waldorf School, Date: Sept 3/1994<br>
+                    1. My rate has gone from 81 w.p.m. all the way to 135. I am reading faster.<br>
+                    6. You were very fun to work with. You were really nice and you did not care if I messed up. The time went really fast. And I really got alot out of it. Thanks Marin <3
+                </p>
+            </div>
+
+            <!-- Bedford Middle Student -->
+            <div class="testimonial-item">
+                <img src="student_bedford_middle_7-21-94.jpg" alt="Student comment from Bedford Middle - Staples" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Bedford Middle - Staples, Date: 7-21-94<br>
+                    1. I increased my rate by three times, my first rate was 160, my final was 570.<br>
+                    6. Really helpful, I enjoyed it, I learned a lot! 10+
+                </p>
+            </div>
+
+            <!-- Greenwich Academy Student -->
+            <div class="testimonial-item">
+                <img src="student_greenwich_academy_2-9-94.jpg" alt="Student comment from Greenwich Academy" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Greenwich Academy, Date: 2/9/94<br>
+                    1. It has helped me alot. I went from 120 wpm to around 250 wpm.<br>
+                    6. He helped a lot and knew what he was talking about. He helped me out a lot.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Benefits Section -->
-    <section class="benefits">
+    <section id="benefits" class="benefits">
         <div class="container">
             <h2 class="section-title">You have a special opportunity to enroll in A Reading Skill Program Which is MORE Than Speed Reading.</h2>
             
@@ -799,7 +952,7 @@
                     <h3>Better Comprehension</h3>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-icon">✓</div>
                     <h3>Stronger Concentration</h3>
                 </div>
             </div>
@@ -812,7 +965,7 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
+    <section id="stats" class="stats">
         <div class="container">
             <h2 class="section-title" style="color: var(--white);">WHO CAN BENEFIT FROM THE PROGRAM?</h2>
             <p style="font-size: 1.2rem; max-width: 800px; margin: 20px auto 50px; font-weight: 300;">Successful students as well as those experiencing academic difficulty. For over 60 years more than 500,000 students in 100s of Private Schools and Universities, from grades 3-12, college students and professionals have been helped by using Baldridge's unique techniques and strategies for enrichment as well as for <strong>failure prevention</strong></p>
@@ -835,7 +988,7 @@
             <h2 class="section-title">Limited Enrollment Opportunities for High Achieving Students Motivated to Learn from 3rd Grade - 12th, College Students and Professional Adults.</h2>
             
             <img src="5parents.png" alt="Group of adult learners in classroom setting" style="width: 100%; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 40px;" loading="lazy">
-            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">Baldridge Reading and Study Strategy Programs have been taught by the Baldridge staff in more than 400 schools, colleges and business organizations. We work with a limited clientele, so contact us for enrollment via email at Vipmediapr@gmail.com.</p>
+            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px; color: var(--grey);">Baldridge Reading and Study Strategy Programs have been taught by the Baldridge staff in more than 400 schools, colleges and business organizations. We work with a limited clientele, so contact us for enrollment.</p>
         </div>
     </section>
 
@@ -951,8 +1104,140 @@
         </div>
     </section>
 
+    <!-- College Testimonials Section -->
+    <section id="testimonials-college" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Reference Letters and Student Comments - Colleges and Other Schools</h2>
+
+            <!-- Remaining Deans Letters -->
+            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Deans' Recommendations</h3>
+
+            <!-- Brown University Dean -->
+            <div class="testimonial-item">
+                <img src="brown_dean.jpg" alt="Letter from Brown University Dean" loading="lazy">
+                <p class="testimonial-transcript">
+                    To Whom It May Concern:<br>
+                    I am happy to share with you a personal evaluation of my experience with Lila and Ken Baldridge and their Reading and Study Strategy Program. They have been offering their programs at Brown (week-long and weekend) each semester since 1994, when I took over responsibility for coordinating Learning Skills here.<br>
+                    Most notable in their teaching is the respect the Baldridges have for their students' minds. They listen and give careful attention to each student in the analysis of personal strengths and weaknesses. Then with eager flexibility and their own natural compassion, they coach students in the development of personally appropriate creative techniques that can be developed to observe, approach and train one's own self/mind. They have an amazing array of skill-builders and analytic tools, and their positive approach encourages each student to develop honest self-analysis and then to enjoy the challenge of building strengths.<br>
+                    The hour -- or two -- I spend with them each semester is a personal treat and reward in which I am happy to indulge, knowing that the students who enroll in their programs get to witness and benefit from their eager, open delight in academic discipline and the life of the mind.<br>
+                    Sincerely yours,<br>
+                    Joyce Reed<br>
+                    Associate Dean of the College
+                </p>
+            </div>
+
+            <!-- Johns Hopkins Dean -->
+            <div class="testimonial-item">
+                <img src="jhu_dean.jpg" alt="Letter from Johns Hopkins University Dean" loading="lazy">
+                <p class="testimonial-transcript">
+                    Dear Students and Parents,<br>
+                    As part of our continuing effort to provide the best learning opportunities for our students, we have made arrangements for two special, advanced reading and study strategy programs to be held on our campus. These programs have proven to be highly successful at more than one-hundred colleges and universities.<br>
+                    The programs are conducted by Lila and Ken Baldridge, who have been responsible for teaching many thousands of students and adults and who have published numerous books on reading and study techniques.<br>
+                    A feature of this program is that skill improvement is individualized by having students bring to class their own textbooks and other academic reading (for example, HISTORY, ECONOMICS, PSYCHOLOGY, BIOLOGY, PHYSICS, MATHEMATICS, ENGLISH, LITERATURE, FRENCH, etc.). As a result of learning more efficient study techniques using their own textbooks, lecture notes and other reading material, students can see immediate results in preparing for (1) taking tests; (2) classroom discussion, and (3) paper writing.<br>
+                    Students typically find that they improve their comprehension by clearer organization of ideas; lengthen concentration by overcoming wasteful daydreaming; strengthen memory of facts and ideas; and save time by learning to read faster and more flexibly. There are no specific out-of-class assignments, and scheduling is flexible to individual academic schedules.<br>
+                    While the academic performance of most, if not all, students can be strengthened by improving their reading skills, some students are in greater need than others. In reaching a decision regarding participation in this program, students and parents might consider the following enrollment guidelines:<br>
+                    (1) Optional, as an enrichment opportunity for students who are doing well already;<br>
+                    (2) Recommended, for students who are performing at an average level, as a failure prevention measure.<br>
+                    I hope that you will seriously consider this valuable opportunity. To register, please complete and return the enclosed Registration Form as soon as possible since spaces are assigned on a first-come, first-served basis.<br>
+                    Sincerely,<br>
+                    Martha O. Roseman<br>
+                    Associate Dean
+                </p>
+            </div>
+
+            <!-- St. Pius X Dean -->
+            <div class="testimonial-item">
+                <img src="st_pius_dean.jpg" alt="Letter from St. Pius X Dean" loading="lazy">
+                <p class="testimonial-transcript">
+                    Dear Lila and Ken:<br>
+                    I would like to thank you for your outstanding Reading and Study Skills Course. The students had a wonderful time while they were learning some excellent techniques for making the most of their study time. Your style of teaching makes the class fun and productive.<br>
+                    I was most impressed by the feedback from the students that you shared with me. It was apparent that they learned a great deal!<br>
+                    Parents have also been pleased with the program, and they tell each other about the value of the skills you teach. I get calls well in advance of the announcement about the course from parents who want to be sure to build their schedule around when you will be at St. Pius.<br>
+                    Keep up the good work. We look forward to the sessions you will be teaching here this summer.<br>
+                    Sincerely,<br>
+                    Frank Moore<br>
+                    Dean of Studies
+                </p>
+            </div>
+
+            <!-- Remaining Student Comments -->
+            <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 20px; font-weight: 500;">Student Comments</h3>
+
+            <!-- Loomis Chaffee Student -->
+            <div class="testimonial-item">
+                <img src="student_loomis_6-15-97.jpg" alt="Student comment from Loomis Chaffee" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Loomis Chaffee, Date: 6/15/97<br>
+                    1. It went from 104-195, but my comprehension went up as well. Now I feel comfortable allowing my eyes to go because I can take in the info. at the same time.<br>
+                    6. Cliff is totally positive and makes what some people look at as torture, actually interesting'n. He's got some great stories that I've tucked away to share with some friends + my confidence is up for next year's courses. He's a great guy to work with - clear + direct (and a good sense of humor. I felt very comfortable + I await his visit in September. Thanx Cliff - Ollie
+                </p>
+            </div>
+
+            <!-- Greenwich High to Princeton -->
+            <div class="testimonial-item">
+                <img src="student_greenwich_princeton_7-27-97.jpg" alt="Student comment from Greenwich High to Princeton" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Greenwich High School -> Princeton, Date: July 27/1997<br>
+                    1. My rate has certainly improved. The range of rates are among the higher numbers now.<br>
+                    6. The teacher was extremely effective and very encouraging. He taught the techniques very well and without the program I feel like I am reading much faster and I will continue to try and improve my reading rate (with the having good comprehension) using the techniques that I was taught. The teacher and program definitely benefited me.
+                </p>
+            </div>
+
+            <!-- Darien High Carnegie Mellon -->
+            <div class="testimonial-item">
+                <img src="student_darien_carnegie_1-7-98.jpg" alt="Student comment from Darien High / Carnegie Mellon" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Darien High / Carnegie Mellon University, Date: 1.7.98<br>
+                    1. I went from a rate of about 100 words a minute to about 160 words a minute for good understanding. But my range can now go up to the 500s when I'm just browsing and figuring out the main concepts in a chapter.<br>
+                    6. Very enthusiastic teacher. Believes strongly in what he teaches. Motivational speaker.
+                </p>
+            </div>
+
+            <!-- Greenwich High 9-28-97 -->
+            <div class="testimonial-item">
+                <img src="student_greenwich_9-28-97.jpg" alt="Student comment from Greenwich High School" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Greenwich High School, Date: 9-28-97<br>
+                    1. My rate and range have increased dramatically. Almost doubled.<br>
+                    6. Very nice and helpful. Stuck with me even though I was sick. Thank You
+                </p>
+            </div>
+
+            <!-- Conrad High to Colgate -->
+            <div class="testimonial-item">
+                <img src="student_conrad_colgate_8-10-97.jpg" alt="Student comment from Conrad High to Colgate U" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Conrad High School (Hartford) to Colgate U, Date: August 10,1997<br>
+                    1. When I first took the timing for very good comprehension I was at about 204 words per minute. After "warming up, and going through the program I was able to get it up to around 330 words per minute.<br>
+                    6. This was a very beneficial program for me to enroll in before I head off to college. Knowing the little hints will give me a little edge over the other students. With all the positive encouragement I got I'm sure that I will believe in these approaches and be able to use them to the best of my ability to be successful at Colgate.
+                </p>
+            </div>
+
+            <!-- Darien High 10/19 -->
+            <div class="testimonial-item">
+                <img src="student_darien_10-19.jpg" alt="Student comment from Darien High School" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Darien High School, Date: 10/19<br>
+                    1. At the beginning of the program I had one slow style of reading, but after the program I not only learned how to survey and explore scan, read at a fair level, but I increased my base rate by 100 wpm.<br>
+                    6. He was very motivational and always positive. Fun and constantly interesting. I enjoyed the course, especially taking it with Cliff. Thank you! Way to Boogie!
+                </p>
+            </div>
+
+            <!-- Greenwich High 11/4/97 -->
+            <div class="testimonial-item">
+                <img src="student_greenwich_11-4-97.jpg" alt="Student comment from Greenwich High" loading="lazy">
+                <p class="testimonial-transcript">
+                    School: Greenwich High, Date: 11/4/97<br>
+                    1. Overall, my rate and range had increased substantially (up a minimum of 50-100 words a minute).<br>
+                    6. Mr. Baldridge's manner and style of teaching were very good. He was extremely consistent in coaching and pushing me to go to my limits during the reading and reading sessions. In addition, he taught in a manner that demonstrated he had a superior and strong background of the concepts he taught in the speed reading course. Overall, a very good beneficial program!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Contact Section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title" style="color: var(--white);">Baldridge Reading and Study Strategy Program Global</h2>
             
