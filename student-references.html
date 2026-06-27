@@ -8,39 +8,40 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --primary: #1a3a5c; --accent: #1a9e7a; --accent-dark: #147a5e; --light: #f7f9fc; --white: #ffffff; --grey: #5a6a7a; --light-grey: #e2e8f0; --dark: #0f2035; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); }
-        .main-nav { background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 100; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        .nav-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .nav-logo span { color: var(--accent); }
-        .nav-links { display: flex; align-items: center; list-style: none; gap: 4px; flex-wrap: wrap; }
-        .nav-links a { color: var(--grey); text-decoration: none; padding: 7px 11px; border-radius: 6px; font-size: 0.88rem; }
+        .main-nav { background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 100; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .nav-logo { font-size: 0.95rem; font-weight: 700; color: var(--primary); text-decoration: none; line-height: 1.3; }
+        .nav-logo span { color: var(--accent); display: block; font-size: 0.75rem; font-weight: 500; }
+        .nav-links { display: flex; align-items: center; list-style: none; gap: 3px; flex-wrap: wrap; }
+        .nav-links a { color: var(--grey); text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 0.82rem; }
         .nav-links a:hover { color: var(--primary); background: var(--light); }
         .nav-enroll { background: var(--accent) !important; color: var(--white) !important; font-weight: 700 !important; border-radius: 7px !important; }
         .nav-consult { border: 2px solid var(--primary) !important; color: var(--primary) !important; font-weight: 600 !important; border-radius: 7px !important; }
-        .container { max-width: 960px; margin: 0 auto; padding: 60px 20px; }
-        h1 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
-        .page-sub { color: var(--grey); margin-bottom: 48px; font-size: 1rem; }
-        h2 { font-size: 1.3rem; color: var(--primary); font-weight: 700; margin: 44px 0 16px; padding-top: 24px; border-top: 2px solid var(--light-grey); }
+        .container { max-width: 960px; margin: 0 auto; padding: 56px 20px; }
+        h1 { font-size: 2rem; color: var(--primary); font-weight: 700; margin-bottom: 6px; }
+        .page-sub { color: var(--grey); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.8; }
+        h2 { font-size: 1.2rem; color: var(--primary); font-weight: 700; margin: 40px 0 14px; padding-top: 20px; border-top: 2px solid var(--light-grey); }
         h2:first-of-type { border-top: none; margin-top: 0; }
-        .comment-card { background: var(--light); border-radius: 10px; padding: 22px 26px; margin-bottom: 16px; border-left: 4px solid var(--accent); }
-        .comment-card img { width: 100%; height: auto; border-radius: 6px; margin-bottom: 14px; }
-        .comment-card .meta { font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-        .comment-card p { color: var(--grey); font-style: italic; font-size: 0.95rem; line-height: 1.7; }
-        .parent-quote { background: var(--primary); color: var(--white); border-radius: 12px; padding: 28px 32px; margin-bottom: 16px; }
-        .parent-quote .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 2px; color: #7ecfb5; font-weight: 700; margin-bottom: 8px; }
-        .parent-quote p { color: rgba(255,255,255,0.88); font-style: italic; font-size: 0.97rem; line-height: 1.8; }
-        .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
-        .btn-primary { background: var(--accent); color: var(--white); padding: 14px 28px; border-radius: 8px; font-size: 1rem; font-weight: 700; text-decoration: none; display: inline-block; }
-        .btn-secondary { background: var(--white); color: var(--primary); padding: 12px 26px; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; border: 2px solid var(--primary); display: inline-block; }
+        .comment-card { background: var(--light); border-radius: 10px; padding: 20px 24px; margin-bottom: 14px; border-left: 4px solid var(--accent); }
+        .comment-card img { width: 100%; height: auto; border-radius: 6px; margin-bottom: 12px; }
+        .comment-card .meta { font-size: 0.78rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 7px; }
+        .comment-card p { color: var(--grey); font-style: italic; font-size: 0.93rem; line-height: 1.7; }
+        .parent-quote { background: var(--primary); color: var(--white); border-radius: 12px; padding: 26px 30px; margin-bottom: 14px; }
+        .parent-quote .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #7ecfb5; font-weight: 700; margin-bottom: 8px; }
+        .parent-quote p { color: rgba(255,255,255,0.88); font-style: italic; font-size: 0.95rem; line-height: 1.8; }
+        .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
+        .btn-primary { background: var(--accent); color: var(--white); padding: 13px 26px; border-radius: 8px; font-size: 0.97rem; font-weight: 700; text-decoration: none; display: inline-block; }
+        .btn-primary:hover { background: var(--accent-dark); }
+        .btn-secondary { background: var(--white); color: var(--primary); padding: 11px 24px; border-radius: 8px; font-size: 0.97rem; font-weight: 600; text-decoration: none; border: 2px solid var(--primary); display: inline-block; }
         footer { background: var(--dark); color: var(--white); padding: 30px 20px; text-align: center; }
-        .footer-nav { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 14px; flex-wrap: wrap; }
-        .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; }
-        footer p { font-size: 0.78rem; opacity: 0.35; }
-        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.6rem; } }
+        .footer-nav { display: flex; justify-content: center; gap: 18px; list-style: none; margin-bottom: 12px; flex-wrap: wrap; }
+        .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
+        footer p { font-size: 0.76rem; opacity: 0.35; }
+        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } }
     </style>
 </head>
 <body>
 <nav class="main-nav">
-    <a href="index.html" class="nav-logo">Baldridge <span>Reading</span></a>
+    <a href="index.html" class="nav-logo">Baldridge Reading<span>and Study Strategy Program</span></a>
     <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="locations.html">Ivy League &amp; Private School Locations</a></li>
@@ -53,66 +54,72 @@
 </nav>
 <div class="container">
     <h1>Student Reference Letters</h1>
-    <p class="page-sub">Comments from students who completed the Baldridge Reading Program — from 3rd grade through college.</p>
+    <p class="page-sub">A portion of the hundreds of students at private schools, public schools, private universities, and Ivy League schools who have completed the 4-hour Baldridge Reading and Study Strategy Program from 3rd grade through 12th grade and college — conducted by Cliff Baldridge.</p>
 
-    <h2>College &amp; High School Students</h2>
+    <!-- LOWER & MIDDLE SCHOOL -->
+    <h2>Lower &amp; Middle School Students — Grades 3–8</h2>
 
     <div class="comment-card">
-        <img src="3_rec_greenwichhigh_princeton.jpg" alt="Greenwich High to Princeton" loading="lazy">
-        <div class="meta">Greenwich High School → Princeton University · July 1997</div>
-        <p>"The teacher was extremely effective and very encouraging. I feel like I am reading much faster and will continue to improve my reading rate with good comprehension using the techniques I was taught."</p>
+        <img src="11_rec_greenwichacademy6thgrade.jpg" alt="Greenwich Academy student" loading="lazy">
+        <div class="meta">Greenwich Academy · February 1997</div>
+        <p>"It has helped me a lot. I went from 120 wpm to around 250 wpm. He helped a lot and knew what he was talking about."</p>
     </div>
 
     <div class="comment-card">
-        <img src="4_rec_darienhigh_carnegiemellon.jpg" alt="Darien High / Carnegie Mellon" loading="lazy">
-        <div class="meta">Darien High School → Carnegie Mellon University · January 1998</div>
-        <p>"I went from about 100 words a minute to about 160 wpm for good understanding. My range can now go up to the 500s when browsing. Very enthusiastic teacher. Believes strongly in what he teaches. Motivational speaker."</p>
-    </div>
-
-    <div class="comment-card">
-        <img src="2_rec_greenwichhigh_georgetown.jpg" alt="Greenwich High to Georgetown" loading="lazy">
-        <div class="meta">Greenwich High School → Georgetown University · July 1997</div>
-        <p>"All of my rates have drastically improved. The techniques did not take too much time or extra effort yet still seem to be very effective."</p>
-    </div>
-
-    <div class="comment-card">
-        <img src="10_rec_connardhigh_colgate.jpg" alt="Conrad High to Colgate" loading="lazy">
-        <div class="meta">Conrad High School → Colgate University · August 1997</div>
-        <p>"I went from about 204 wpm to around 330 wpm. This was a very beneficial program before heading off to college. Knowing the little hints will give me a little edge over the other students."</p>
-    </div>
-
-    <div class="comment-card">
-        <img src="15_rec_darienhigh.jpg" alt="Darien High School" loading="lazy">
-        <div class="meta">Darien High School · October 2019</div>
-        <p>"I not only learned how to survey and explore scan, but I increased my base rate by 100 wpm. He was very motivational and always positive. Fun and constantly interesting. Thank you! Way to Boogie!"</p>
-    </div>
-
-    <div class="comment-card">
-        <img src="16_rec_greenwichhigh2.jpg" alt="Greenwich High School" loading="lazy">
-        <div class="meta">Greenwich High School · November 1997</div>
-        <p>"My rate and range increased substantially — up a minimum of 50–100 words a minute. Mr. Baldridge demonstrated a superior and strong background of the concepts he taught. Overall, a very good beneficial program!"</p>
-    </div>
-
-    <h2>Lower &amp; Middle School Students (Grades 3–9)</h2>
-
-    <div class="comment-card">
-        <img src="8_rec_waldorfsb2.jpg" alt="Marin Waldorf School" loading="lazy">
-        <div class="meta">Marin Waldorf School · September 1999</div>
-        <p>"My rate has gone from 81 w.p.m. all the way to 135. You were very fun to work with and I really got a lot out of it. Thanks ♥"</p>
-    </div>
-
-    <div class="comment-card">
-        <img src="17_rec_bedfordmiddle_staples.jpg" alt="Bedford Middle School" loading="lazy">
+        <img src="17_rec_bedfordmiddle_staples.jpg" alt="Bedford Middle School student" loading="lazy">
         <div class="meta">Bedford Middle School – Staples · July 1997</div>
         <p>"I increased my rate by three times — my first rate was 160, my final was 570. Really helpful, I enjoyed it, I learned a lot! 10+"</p>
     </div>
 
     <div class="comment-card">
-        <img src="11_rec_greenwichacademy6thgrade.jpg" alt="Greenwich Academy" loading="lazy">
-        <div class="meta">Greenwich Academy · February 1997</div>
-        <p>"It has helped me a lot. I went from 120 wpm to around 250 wpm. He helped a lot and knew what he was talking about."</p>
+        <img src="8_rec_waldorfsb2.jpg" alt="Marin Waldorf School student" loading="lazy">
+        <div class="meta">Marin Waldorf School · September 1999</div>
+        <p>"My rate has gone from 81 w.p.m. all the way to 135. You were very fun to work with and I really got a lot out of it. Thanks ♥"</p>
     </div>
 
+    <!-- HIGH SCHOOL -->
+    <h2>High School Students — Grades 9–12</h2>
+
+    <div class="comment-card">
+        <img src="15_rec_darienhigh.jpg" alt="Darien High School student" loading="lazy">
+        <div class="meta">Darien High School · October 2019</div>
+        <p>"I not only learned how to survey and explore scan, but I increased my base rate by 100 wpm. He was very motivational and always positive. Fun and constantly interesting. Thank you! Way to Boogie!"</p>
+    </div>
+
+    <div class="comment-card">
+        <img src="16_rec_greenwichhigh2.jpg" alt="Greenwich High School student" loading="lazy">
+        <div class="meta">Greenwich High School · November 1997</div>
+        <p>"My rate and range increased substantially — up a minimum of 50–100 words a minute. Mr. Baldridge demonstrated a superior and strong background of the concepts he taught. Overall, a very good beneficial program!"</p>
+    </div>
+
+    <!-- COLLEGE -->
+    <h2>College-Bound &amp; University Students</h2>
+
+    <div class="comment-card">
+        <img src="4_rec_darienhigh_carnegiemellon.jpg" alt="Darien High / Carnegie Mellon student" loading="lazy">
+        <div class="meta">Darien High School → Carnegie Mellon University · January 1998</div>
+        <p>"I went from about 100 words a minute to about 160 wpm for good understanding. My range can now go up to the 500s when browsing. Very enthusiastic teacher. Believes strongly in what he teaches. Motivational speaker."</p>
+    </div>
+
+    <div class="comment-card">
+        <img src="2_rec_greenwichhigh_georgetown.jpg" alt="Greenwich High to Georgetown student" loading="lazy">
+        <div class="meta">Greenwich High School → Georgetown University · July 1997</div>
+        <p>"All of my rates have drastically improved. The techniques did not take too much time or extra effort yet still seem to be very effective."</p>
+    </div>
+
+    <div class="comment-card">
+        <img src="3_rec_greenwichhigh_princeton.jpg" alt="Greenwich High to Princeton student" loading="lazy">
+        <div class="meta">Greenwich High School → Princeton University · July 1997</div>
+        <p>"The teacher was extremely effective and very encouraging. I feel like I am reading much faster and will continue to improve my reading rate with good comprehension using the techniques I was taught."</p>
+    </div>
+
+    <div class="comment-card">
+        <img src="10_rec_connardhigh_colgate.jpg" alt="Conrad High to Colgate student" loading="lazy">
+        <div class="meta">Conrad High School → Colgate University · August 1997</div>
+        <p>"I went from about 204 wpm to around 330 wpm. This was a very beneficial program before heading off to college. Knowing the little hints will give me a little edge over the other students."</p>
+    </div>
+
+    <!-- PARENT TESTIMONIALS -->
     <h2>Parent Testimonials</h2>
 
     <div class="parent-quote">
@@ -143,7 +150,7 @@
         <li><a href="student-references.html">Student References</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-    <p>&copy; 2025–2026 Baldridge Reading. All Rights Reserved.</p>
+    <p>&copy; 2025–2026 Baldridge Reading and Study Strategy Program. All Rights Reserved.</p>
 </footer>
 </body>
 </html>
