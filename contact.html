@@ -57,28 +57,28 @@
     <h1>Free Consultation</h1>
     <p class="page-sub">Tell us about your student and Cliff will reach out to schedule a free 15-minute call. No pressure — just answers.</p>
     <div class="contact-box">
-        <form id="contact-form">
+        <form id="contact-form" autocomplete="off">
             <div class="form-grid">
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="First and last name">
+                    <input type="text" id="name" name="name" required placeholder="First and last name" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="(310) 000-0000">
+                    <input type="tel" id="phone" name="phone" required placeholder="(310) 000-0000" autocomplete="off">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="off">
             </div>
             <div class="form-group">
                 <label for="childinfo">Student's Age, Grade &amp; School</label>
-                <input type="text" id="childinfo" name="childinfo" placeholder="e.g. Age 14, 9th grade, Malibu High School">
+                <input type="text" id="childinfo" name="childinfo" placeholder="e.g. Age 14, 9th grade, Malibu High School" autocomplete="off">
             </div>
             <div class="form-group">
                 <label for="message">Goals for this program</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us what you're hoping to improve..."></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us what you're hoping to improve..." autocomplete="off"></textarea>
             </div>
             <button type="submit" class="btn-submit" id="submit-btn">Send — We'll Be in Touch</button>
         </form>
@@ -104,29 +104,40 @@
 </footer>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+    // Clear form on every page load/refresh — privacy protection
+    window.addEventListener('load', function() {
+        document.getElementById('contact-form').reset();
+        document.getElementById('success-msg').style.display = 'none';
+        document.getElementById('contact-form').style.display = 'block';
+        document.getElementById('submit-btn').textContent = 'Send — We\'ll Be in Touch';
+        document.getElementById('submit-btn').disabled = false;
+    });
 
-    const formData = new FormData(this);
-    formData.append('_subject', 'New Consultation Request — Baldridge Reading');
-    formData.append('_captcha', 'false');
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
 
-    try {
-        await fetch('https://formsubmit.co/vipmediapr@gmail.com', {
-            method: 'POST',
-            body: formData,
-            mode: 'no-cors'
-        });
-    } catch(err) {}
+        const btn = document.getElementById('submit-btn');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
 
-    // Always show success and hide form regardless of response
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('success-msg').style.display = 'block';
-});
+        const formData = new FormData(this);
+        formData.append('_subject', 'New Consultation Request — Baldridge Reading Program');
+        formData.append('_captcha', 'false');
+
+        try {
+            await fetch('https://formsubmit.co/vipmediapr@gmail.com', {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+        } catch(err) {}
+
+        // Clear form, hide it, show thank you
+        document.getElementById('contact-form').reset();
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+    });
 </script>
 
 </body>
