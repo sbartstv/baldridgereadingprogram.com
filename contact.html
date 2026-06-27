@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Baldridge Reading Program</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a3a5c; --accent: #1a9e7a; --accent-dark: #147a5e; --light: #f7f9fc; --white: #ffffff; --grey: #5a6a7a; --light-grey: #e2e8f0; --dark: #0f2035; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); }
+        .main-nav { background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 100; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        .nav-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; align-items: center; list-style: none; gap: 4px; flex-wrap: wrap; }
+        .nav-links a { color: var(--grey); text-decoration: none; padding: 7px 11px; border-radius: 6px; font-size: 0.88rem; }
+        .nav-links a:hover { color: var(--primary); background: var(--light); }
+        .nav-enroll { background: var(--accent) !important; color: var(--white) !important; font-weight: 700 !important; border-radius: 7px !important; }
+        .nav-consult { border: 2px solid var(--primary) !important; color: var(--primary) !important; font-weight: 600 !important; border-radius: 7px !important; }
+        .container { max-width: 640px; margin: 0 auto; padding: 60px 20px; }
+        h1 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
+        .page-sub { color: var(--grey); margin-bottom: 36px; font-size: 1rem; }
+        .contact-box { background: var(--light); border-radius: 16px; padding: 40px; }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-weight: 600; color: var(--primary); margin-bottom: 6px; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid var(--light-grey); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--white); color: var(--dark); transition: border-color 0.2s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .btn-submit { background: var(--accent); color: var(--white); padding: 14px 32px; border-radius: 8px; font-size: 1rem; font-weight: 700; border: none; cursor: pointer; width: 100%; transition: background 0.2s; }
+        .btn-submit:hover { background: var(--accent-dark); }
+        #success-message { display: none; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 1rem; text-align: center; padding: 14px; background: rgba(26,158,122,0.08); border-radius: 8px; }
+        .or-enroll { text-align: center; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--light-grey); }
+        .or-enroll p { color: var(--grey); margin-bottom: 14px; font-size: 0.95rem; }
+        .btn-enroll { background: var(--accent); color: var(--white); padding: 14px 32px; border-radius: 8px; font-size: 1rem; font-weight: 700; text-decoration: none; display: inline-block; }
+        footer { background: var(--dark); color: var(--white); padding: 30px 20px; text-align: center; margin-top: 60px; }
+        .footer-nav { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 14px; flex-wrap: wrap; }
+        .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; }
+        footer p { font-size: 0.78rem; opacity: 0.35; }
+        @media (max-width: 768px) { .nav-links { display: none; } .form-grid { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } .contact-box { padding: 24px; } }
+    </style>
+</head>
+<body>
+<nav class="main-nav">
+    <a href="index.html" class="nav-logo">Baldridge <span>Reading</span></a>
+    <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="locations.html">Ivy League &amp; Private School Locations</a></li>
+        <li><a href="deans-letters.html">Dean's Letters</a></li>
+        <li><a href="student-references.html">Student References</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="nav-consult">Free Consultation</a></li>
+        <li><a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="nav-enroll">Enroll Now — $600</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <h1>Free Consultation</h1>
+    <p class="page-sub">Tell us about your student and we'll reach out to schedule a free 15-minute call with Cliff. No pressure — just answers.</p>
+    <div class="contact-box">
+        <form id="contact-form" action="https://formsubmit.co/vipmediapr@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Consultation Request — Baldridge Reading">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="Name" required placeholder="First and last name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="Phone" required placeholder="(310) 000-0000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label for="child-info">Student's Age, Grade &amp; School</label>
+                <input type="text" id="child-info" name="Student Info" placeholder="e.g. Age 14, 9th grade, Malibu High School">
+            </div>
+            <div class="form-group">
+                <label for="message">What are your goals for this program?</label>
+                <textarea id="message" name="Message" rows="4" placeholder="Tell us what you're hoping to improve — reading speed, test scores, study habits, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send — We'll Be in Touch</button>
+            <div id="success-message">✓ Thank you! Cliff will be in touch shortly.</div>
+        </form>
+        <div class="or-enroll">
+            <p>Ready to enroll now? Skip the call and book directly.</p>
+            <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-enroll">Enroll Now — $600</a>
+        </div>
+    </div>
+</div>
+<footer>
+    <ul class="footer-nav">
+        <li><a href="about.html">About</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="deans-letters.html">Dean's Letters</a></li>
+        <li><a href="student-references.html">Student References</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2025–2026 Baldridge Reading. All Rights Reserved.</p>
+</footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function() {
+    setTimeout(function() {
+        document.getElementById('success-message').style.display = 'block';
+    }, 500);
+});
+</script>
+</body>
+</html>
