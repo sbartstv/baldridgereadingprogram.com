@@ -3,148 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Locations — Baldridge Reading Program</title>
+    <title>Privacy Policy | Baldridge Reading and Study Strategy Program</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #1a3a5c; --accent: #1a9e7a; --accent-dark: #147a5e; --light: #f7f9fc; --white: #ffffff; --grey: #5a6a7a; --light-grey: #e2e8f0; --dark: #0f2035; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); }
+        :root {
+            --primary: #1a3a5c;
+            --accent: #1a9e7a;
+            --accent-dark: #147a5e;
+            --light: #f7f9fc;
+            --white: #ffffff;
+            --grey: #5a6a7a;
+            --light-grey: #e2e8f0;
+            --dark: #0f2035;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--white); overflow-x: hidden; }
         a:focus, button:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
         .skip-link { position: absolute; top: -100px; left: 10px; background: var(--primary); color: var(--white); padding: 10px 18px; border-radius: 6px; z-index: 200; text-decoration: none; font-weight: 600; }
         .skip-link:focus { top: 10px; }
-        @media (prefers-reduced-motion: reduce) {
-            * { animation: none !important; transition: none !important; }
-        }
-        .main-nav { background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 100; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); flex-wrap: wrap; gap: 8px; }
-        .nav-logo { font-size: 1.1rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-        .nav-logo span { color: var(--accent); }
-        .nav-links { display: flex; align-items: center; list-style: none; gap: 4px; flex-wrap: wrap; }
-        .nav-links a { color: var(--grey); text-decoration: none; padding: 7px 11px; border-radius: 6px; font-size: 0.88rem; }
+
+        /* NAV */
+        .main-nav { background: var(--white); border-bottom: 1px solid var(--light-grey); position: sticky; top: 0; z-index: 100; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); flex-wrap: wrap; gap: 8px; }
+        .nav-logo { font-size: 0.95rem; font-weight: 700; color: var(--primary); text-decoration: none; line-height: 1.3; }
+        .nav-logo span { color: var(--accent); display: block; font-size: 0.75rem; font-weight: 500; }
+        .nav-links { display: flex; align-items: center; list-style: none; gap: 3px; flex-wrap: wrap; }
+        .nav-links a { color: var(--grey); text-decoration: none; padding: 6px 10px; border-radius: 6px; font-size: 0.82rem; white-space: nowrap; transition: color 0.2s, background 0.2s; }
         .nav-links a:hover { color: var(--primary); background: var(--light); }
         .nav-links a[aria-current="page"] { color: var(--primary); font-weight: 700; background: var(--light); }
         .nav-enroll { background: var(--accent) !important; color: var(--white) !important; font-weight: 700 !important; border-radius: 7px !important; }
         .nav-consult { border: 2px solid var(--primary) !important; color: var(--primary) !important; font-weight: 600 !important; border-radius: 7px !important; }
-        .container { max-width: 960px; margin: 0 auto; padding: 60px 20px; }
-        h1 { font-size: 2.2rem; color: var(--primary); font-weight: 700; margin-bottom: 10px; }
-        .page-sub { color: var(--grey); margin-bottom: 48px; font-size: 1rem; }
-        h2.section-head { font-size: 1.3rem; color: var(--primary); font-weight: 700; margin: 44px 0 16px; padding-top: 24px; border-top: 2px solid var(--light-grey); }
-        h2.section-head:first-of-type { border-top: none; margin-top: 0; }
-        .uni-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-        .uni-item { background: var(--light); border-radius: 8px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; }
-        .uni-name { font-weight: 600; font-size: 0.88rem; color: var(--primary); }
-        .uni-years { color: var(--accent-dark); font-weight: 700; font-size: 0.82rem; white-space: nowrap; margin-left: 8px; }
-        .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 48px; }
-        .btn-primary { background: var(--accent); color: var(--white); padding: 14px 28px; border-radius: 8px; font-size: 1rem; font-weight: 700; text-decoration: none; display: inline-block; }
-        .btn-secondary { background: var(--white); color: var(--primary); padding: 12px 26px; border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none; border: 2px solid var(--primary); display: inline-block; }
-        footer { background: var(--dark); color: var(--white); padding: 30px 20px; text-align: center; }
-        .footer-nav { display: flex; justify-content: center; gap: 20px; list-style: none; margin-bottom: 14px; flex-wrap: wrap; }
-        .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; }
+
+        /* PAGE HEADER */
+        .page-header { background: var(--primary); padding: 48px 20px 40px; text-align: center; }
+        .page-header h1 { color: var(--white); font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+        .page-header p { color: rgba(255,255,255,0.85); font-size: 0.95rem; max-width: 600px; margin: 0 auto; }
+
+        /* CONTENT */
+        .container { max-width: 800px; margin: 0 auto; padding: 56px 20px; }
+        .container h2 { color: var(--primary); font-size: 1.3rem; font-weight: 700; margin: 32px 0 12px; }
+        .container h2:first-child { margin-top: 0; }
+        .container p { color: var(--dark); font-size: 0.97rem; margin-bottom: 14px; }
+        .container ul { margin: 0 0 14px 24px; color: var(--dark); font-size: 0.97rem; }
+        .container li { margin-bottom: 8px; }
+        .updated-note { background: var(--light); border-left: 4px solid var(--accent); padding: 14px 18px; border-radius: 6px; font-size: 0.88rem; color: var(--grey); margin-bottom: 32px; }
+        .contact-box { background: var(--light); border-radius: 10px; padding: 24px; margin-top: 12px; }
+        .contact-box a { color: var(--accent-dark); font-weight: 600; }
+
+        /* FOOTER */
+        footer { background: var(--dark); color: var(--white); padding: 34px 20px; text-align: center; }
+        .footer-nav { display: flex; justify-content: center; gap: 18px; list-style: none; margin-bottom: 14px; flex-wrap: wrap; }
+        .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
         .footer-nav a:hover, .footer-nav a:focus { color: var(--white); }
-        footer p { font-size: 0.78rem; opacity: 0.35; }
-        @media (max-width: 768px) { .nav-links { display: none; } .uni-grid { grid-template-columns: 1fr; } h1 { font-size: 1.6rem; } }
+        footer p { font-size: 0.76rem; opacity: 0.35; margin: 4px auto; max-width: 800px; line-height: 1.6; }
+
+        @media (prefers-reduced-motion: reduce) {
+            * { animation: none !important; transition: none !important; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .page-header h1 { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- NAV -->
 <nav class="main-nav" aria-label="Primary navigation">
-    <a href="index.html" class="nav-logo">Baldridge <span>Reading</span></a>
+    <a href="index.html" class="nav-logo">Baldridge Reading<span>and Study Strategy Program</span></a>
     <ul class="nav-links">
         <li><a href="about.html">About</a></li>
-        <li><a href="locations.html" aria-current="page">Ivy League &amp; Private School Locations</a></li>
+        <li><a href="locations.html">Ivy League &amp; Private School Locations</a></li>
         <li><a href="deans-letters.html">Dean's Letters</a></li>
         <li><a href="student-references.html">Student References</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="privacy.html" aria-current="page">Privacy Policy</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="contact.html" class="nav-consult">Free Consultation</a></li>
         <li><a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="nav-enroll">Enroll Now — $600</a></li>
     </ul>
 </nav>
 
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <h1>Privacy Policy</h1>
+    <p>How the Baldridge Reading and Study Strategy Program collects, uses, and protects your information.</p>
+</header>
+
 <main id="main-content" class="container">
-    <h1>Ivy League &amp; Private School Locations</h1>
-    <p class="page-sub">The Baldridge Reading and Study Strategy Program has been conducted at more than 400 schools, colleges, universities, and business organizations including:</p>
+    <p class="updated-note">Last updated: June 2026. This policy applies to BaldridgeReadingProgram.com and all related enrollment, contact, and consultation forms.</p>
 
-    <h2 class="section-head">Private Universities, Colleges &amp; Ivy League Schools</h2>
-    <div class="uni-grid">
-        <div class="uni-item"><span class="uni-name">AGNES SCOTT COLLEGE</span><span class="uni-years">29 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">ALFRED UNIVERSITY</span><span class="uni-years">19 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">ALMA COLLEGE</span><span class="uni-years">22 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">BARNARD COLLEGE</span><span class="uni-years">6 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">BROWN UNIVERSITY</span><span class="uni-years">6 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">CAMPBELL UNIVERSITY</span><span class="uni-years">10 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">CLARKSON UNIVERSITY</span><span class="uni-years">14 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">COLGATE UNIVERSITY</span><span class="uni-years">24 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">COLUMBIA UNIVERSITY</span></div>
-        <div class="uni-item"><span class="uni-name">CONVERSE COLLEGE</span><span class="uni-years">23 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">DAVIDSON COLLEGE</span><span class="uni-years">15 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">DREW UNIVERSITY</span><span class="uni-years">19 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">FAIRFIELD UNIVERSITY</span><span class="uni-years">13 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">FURMAN UNIVERSITY</span><span class="uni-years">14 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">GANNON UNIVERSITY</span><span class="uni-years">8 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">JOHNS HOPKINS UNIVERSITY</span><span class="uni-years">24 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">MILLSAPS COLLEGE</span><span class="uni-years">14 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">PRINCETON UNIVERSITY</span></div>
-        <div class="uni-item"><span class="uni-name">RIPON COLLEGE</span><span class="uni-years">24 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">UNIVERSITY OF RICHMOND</span><span class="uni-years">21 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">WASHINGTON &amp; JEFFERSON</span><span class="uni-years">22 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">WASHINGTON &amp; LEE UNIVERSITY</span></div>
-        <div class="uni-item"><span class="uni-name">WILLIAMS COLLEGE</span><span class="uni-years">10 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">WOFFORD COLLEGE</span><span class="uni-years">19 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">WORCESTER POLYTECHNIC</span><span class="uni-years">16 yrs</span></div>
-        <div class="uni-item"><span class="uni-name">YALE UNIVERSITY</span><span class="uni-years">3 yrs</span></div>
-    </div>
+    <h2>Information We Collect</h2>
+    <p>When you contact us, request a free consultation, or enroll in the program, we may collect the following information directly from you (the parent or adult site visitor):</p>
+    <ul>
+        <li>Name and email address</li>
+        <li>Phone number, if provided</li>
+        <li>Student grade level and school information you choose to share</li>
+        <li>Messages or details submitted through our contact form</li>
+        <li>Payment information processed securely through Stripe at the time of enrollment (we do not store your card details ourselves)</li>
+    </ul>
 
-    <h2 class="section-head">Private, Christian, Catholic, Hebrew &amp; Military Schools</h2>
-    <div class="uni-grid">
-        <div class="uni-item"><span class="uni-name">ADMIRAL FARRAGUT</span></div>
-        <div class="uni-item"><span class="uni-name">BISHOP DIEGO GARCIA</span></div>
-        <div class="uni-item"><span class="uni-name">CHRIST SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">GREENWICH COUNTRY DAY</span></div>
-        <div class="uni-item"><span class="uni-name">GREENWICH HIGH SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">HAMDEN HALL</span></div>
-        <div class="uni-item"><span class="uni-name">HOUSTON SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">HUDSON SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">JACKSON ACADEMY</span></div>
-        <div class="uni-item"><span class="uni-name">JACKSON PREPARATORY SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">LOOMIS CHAFFEE</span></div>
-        <div class="uni-item"><span class="uni-name">MASON PREPARATORY SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">MERCERSBERG ACADEMY</span></div>
-        <div class="uni-item"><span class="uni-name">MOORENBERG ACADEMY</span></div>
-        <div class="uni-item"><span class="uni-name">NORFOLK ACADEMY</span></div>
-        <div class="uni-item"><span class="uni-name">PACELLI HIGH SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">PORTER GAUD SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">ST. PAUL'S BY-THE-SEA</span></div>
-        <div class="uni-item"><span class="uni-name">TOWER GROVE CHRISTIAN SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">TOWER HILL SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">VMI – VIRGINIA MILITARY INSTITUTE</span></div>
-        <div class="uni-item"><span class="uni-name">WALDORF SCHOOL</span></div>
-        <div class="uni-item"><span class="uni-name">WILSON HALL SCHOOL</span></div>
-    </div>
+    <h2>How We Use Your Information</h2>
+    <p>We use the information you provide to respond to consultation requests, schedule and deliver the program, process enrollment payments, and send you information about your sessions. We do not sell your personal information to third parties.</p>
 
-    <h2 class="section-head">Business, Government &amp; International</h2>
-    <div class="uni-grid">
-        <div class="uni-item"><span class="uni-name">THE WHITE HOUSE</span></div>
-        <div class="uni-item"><span class="uni-name">IBM</span></div>
-        <div class="uni-item"><span class="uni-name">GENERAL ELECTRIC</span></div>
-        <div class="uni-item"><span class="uni-name">J.P. MORGAN &amp; CO.</span></div>
-        <div class="uni-item"><span class="uni-name">TIME-WARNER INC.</span></div>
-        <div class="uni-item"><span class="uni-name">READER'S DIGEST</span></div>
-        <div class="uni-item"><span class="uni-name">U.S. DEPT. OF LABOR</span></div>
-        <div class="uni-item"><span class="uni-name">ALCAN</span></div>
-        <div class="uni-item"><span class="uni-name">BRUSSELS</span></div>
-        <div class="uni-item"><span class="uni-name">MUNICH</span></div>
-        <div class="uni-item"><span class="uni-name">VIENNA</span></div>
-        <div class="uni-item"><span class="uni-name">TOKYO</span></div>
-        <div class="uni-item"><span class="uni-name">S.S. UNIVERSE (SEMESTER AT SEA)</span></div>
-    </div>
+    <h2>Children's Privacy</h2>
+    <p>This website and its enrollment forms are directed at parents and other adults, not at children. We do not knowingly collect personal information directly from children under the age of 13. Any student information referenced on our forms (such as grade level) is submitted by a parent or guardian on the student's behalf, not by the child.</p>
+    <p>If you believe a child has submitted personal information to us directly, please contact us using the information below and we will promptly remove it.</p>
 
-    <div class="cta-row">
-        <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-primary">Enroll Now — $600</a>
-        <a href="contact.html" class="btn-secondary">Free Consultation</a>
+    <h2>Third-Party Services</h2>
+    <p>We use trusted third-party services to operate this site, including Stripe for payment processing and a form delivery service for contact form submissions. These providers have their own privacy policies governing how they handle data on our behalf.</p>
+
+    <h2>Data Retention &amp; Security</h2>
+    <p>We retain contact and enrollment information only as long as needed to provide our services and meet recordkeeping obligations. We take reasonable steps to protect your information, though no method of transmission over the internet is completely secure.</p>
+
+    <h2>Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal information at any time by contacting us directly.</p>
+
+    <h2>Accessibility</h2>
+    <p>This site is built to meet WCAG 2.1 Level AA accessibility standards. If you experience any difficulty accessing content on this site, please let us know so we can assist you and address the issue.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Changes will be posted on this page with a revised "last updated" date.</p>
+
+    <h2>Contact Us</h2>
+    <div class="contact-box">
+        <p>Questions about this privacy policy or your information? Reach out:</p>
+        <p><a href="contact.html">Visit our Contact page</a> or email us directly.</p>
     </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
     <ul class="footer-nav">
         <li><a href="about.html">About</a></li>
@@ -154,7 +142,9 @@
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-    <p>&copy; 2025–2026 Baldridge Reading. All Rights Reserved.</p>
+    <p>&copy; 2025–2026 Baldridge Reading and Study Strategy Program, Cliff Baldridge, Et al. All Rights Reserved.</p>
+    <p>All material on this website is protected by copyright under U.S. Copyright laws. No reproduction permitted without expressed written permission.</p>
 </footer>
+
 </body>
 </html>
