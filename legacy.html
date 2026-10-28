@@ -33,10 +33,20 @@
         .highlight-box { background: var(--primary); color: var(--white); border-radius: 12px; padding: 26px 30px; margin: 22px 0; }
         .highlight-box p { color: rgba(255,255,255,0.88); font-style: italic; }
         .highlight-box .attr { font-style: normal; font-weight: 700; color: #7ecfb5; margin-top: 8px; display: block; font-size: 0.85rem; }
-        .book-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; align-items: start; }
-        .book-row img { width: 100%; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: block; }
-        .photo-grid { columns: 2; column-gap: 16px; margin-bottom: 22px; }
-        .photo-grid img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); margin-bottom: 16px; display: block; break-inside: avoid; }
+        figure { margin: 0 0 26px; }
+        figure img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); display: block; }
+        figcaption { font-size: 0.8rem; color: var(--grey); font-style: italic; margin-top: 8px; text-align: center; }
+        .narrow { max-width: 560px; margin-left: auto; margin-right: auto; }
+        .book { max-width: 320px; margin-left: auto; margin-right: auto; }
+        .book img { border-radius: 4px; }
+        .photo-grid { columns: 2; column-gap: 16px; }
+        .photo-grid figure { break-inside: avoid; margin-bottom: 16px; }
+        .back-cover { background: var(--light); border: 1px solid var(--light-grey); border-radius: 12px; padding: 26px 30px; margin: 0 0 26px; }
+        .back-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent-dark); font-weight: 700; margin-bottom: 4px; }
+        .back-cover h3 { font-size: 1.05rem; color: var(--primary); margin-bottom: 10px; }
+        .back-cover ul { list-style: none; margin: 0 0 14px; columns: 2; column-gap: 24px; }
+        .back-cover li { color: var(--dark); font-size: 0.92rem; font-weight: 600; padding: 3px 0; break-inside: avoid; }
+        main p a { color: var(--accent-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
         .caption { font-size: 0.78rem; color: var(--grey); font-style: italic; margin-top: -14px; margin-bottom: 20px; }
         .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
         .btn-primary { background: var(--accent); color: var(--white); padding: 13px 26px; border-radius: 8px; font-size: 0.97rem; font-weight: 700; text-decoration: none; display: inline-block; }
@@ -47,8 +57,7 @@
         .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
         .footer-nav a:hover, .footer-nav a:focus { color: var(--white); }
         footer p { font-size: 0.76rem; opacity: 0.35; }
-        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } .photo-grid { columns: 1; } }
-        @media (max-width: 600px) { .book-row { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; } }
+        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } .photo-grid, .back-cover ul { columns: 1; } .back-cover { padding: 22px 20px; } }
     </style>
 </head>
 <body>
@@ -71,25 +80,107 @@
 </nav>
 
 <main id="main-content" class="container">
+    <figure class="narrow">
+        <img src="baldridge_center.png" alt="The Baldridge Reading and Study Strategy Learning Center in Greenwich, Connecticut">
+    </figure>
+
     <h1>The Baldridge Family Legacy</h1>
     <p class="page-sub">Teaching students to read faster and study smarter since 1956 in Greenwich, Connecticut.</p>
 
-    <img src="mom_dad.png" alt="Mr. and Mrs. Baldridge reading a book together, 1950s" class="full-img">
+    <figure class="narrow">
+        <img src="mom_dad.png" alt="Kenneth and Lila Baldridge reading a book together in the 1950s">
+        <figcaption>My parents, Kenneth and Lila Baldridge, in the 1950s.</figcaption>
+    </figure>
+    <!-- Photo of Kenneth Patrick Baldridge goes here once it is uploaded -->
 
-    <img src="Baldridgewhitehouse.jpg" alt="July 7, 1978 letter from Kenneth P. Baldridge to Landon Kite, Director of Correspondence at The White House, from the Jimmy Carter Presidential Library and Museum" class="full-img" loading="lazy">
+    <h2>How It Began</h2>
+    <p>My parents met in New York City in the 1950s. My father, Kenneth Patrick Baldridge, earned his degree at the University of Cincinnati, where he was a varsity fencer. My mother, Lila, earned a master's degree in teaching at Columbia University.</p>
+    <p>Together they founded Baldridge Reading in 1956 and opened its office in Greenwich, Connecticut. The company grew to 30 teachers and 30 salespeople.</p>
 
-    <div class="book-row">
+    <figure>
+        <img src="2brss1956.png" alt="Teachers and sales staff of Baldridge Reading Services gathered around conference tables in Greenwich, Connecticut" loading="lazy">
+        <figcaption>The teachers and sales staff of Baldridge Reading Services in Greenwich, Connecticut.</figcaption>
+    </figure>
+
+    <h2>1966: Reading Speed and Strategy</h2>
+    <p>In 1966, my father published <em>Reading Speed and Strategy for the Business and Professional Person</em>. By then, he had set up or directed reading programs for more than 50 major corporations, including IBM, and had supervised reading programs at more than 350 secondary schools and colleges across the United States.</p>
+    <figure class="book">
         <img src="readingspeed_1.png" alt="Book cover: Reading Speed and Strategy for the Business and Professional Person, by Kenneth P. Baldridge" loading="lazy">
-        <img src="srs_1.png" alt="Book cover: Seven Reading Strategies, by Kenneth P. Baldridge" loading="lazy">
-        <img src="smartshildren_black.png" alt="Book cover: Professors' Family Secrets for Raising Very Smart Children, by Lila, Ken and Clifford Baldridge" loading="lazy">
+    </figure>
+    <div class="back-cover">
+        <div class="back-label">From the back cover, 1966</div>
+        <h3>About the Author</h3>
+        <p>Kenneth P. Baldridge has been responsible for setting up or directing reading programs for top and middle management personnel in more than 50 major corporations including the following:</p>
+        <ul>
+            <li>Western Electric Company</li>
+            <li>Philadelphia Electric Company</li>
+            <li>Time, Inc., for Time, Life and Fortune</li>
+            <li>National Broadcasting Company</li>
+            <li>Canada Dry Corporation</li>
+            <li>International Business Machine Corporation</li>
+        </ul>
+        <p>He is the co-author of a textbook which has been ordered in class quantities by schools and colleges, including the following:</p>
+        <ul>
+            <li>University of Pennsylvania</li>
+            <li>College of William and Mary</li>
+            <li>University of Chicago</li>
+            <li>Tufts College</li>
+            <li>Boston University</li>
+            <li>Lehigh University</li>
+            <li>University of California, L.A.</li>
+        </ul>
+        <p>Mr. Baldridge has initiated and supervised the administration of developmental reading programs at more than 350 secondary schools and colleges throughout the United States.</p>
+        <p>He is well known as a lecturer before educational and business groups and has spent many years researching the reading process.</p>
     </div>
 
-    <div class="photo-grid">
-        <img src="dad_glib.jpeg" alt="Mr. Baldridge leaving the Greenwich Library with books in hand" loading="lazy">
-        <img src="momdad_glib_1.jpeg" alt="Mr. and Mrs. Baldridge inside the Greenwich Library" loading="lazy">
-        <img src="momglib.JPG" alt="Mrs. Baldridge reading a book at the Greenwich Library" loading="lazy">
-        <img src="baldridge_center.png" alt="The Baldridge Reading and Study Strategy Learning Center in Greenwich, Connecticut" loading="lazy">
+    <h2>In the Heart of Greenwich</h2>
+    <p>Our reading center was on Grigg Street, between Greenwich Avenue and Arch Street in the center of Greenwich. Our office was right next to where <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a> is today, and Diane still runs her family bookstore there.</p>
+    <p>We did all of our mailings to private schools, Ivy League colleges, and universities at the former post office on Greenwich Avenue.</p>
+    <p>My parents also owned the first health food store in Greenwich, along with its property on Greenwich Avenue, right next to the old movie theater that is now the Apple Store.</p>
+
+    <h2>1978: The White House</h2>
+    <p>An archivist at the Jimmy Carter Presidential Library and Museum recently recovered this July 7, 1978 letter. My father wrote it to Landon Kite, Director of Correspondence at The White House during President Jimmy Carter's administration, and it accompanied his final report.</p>
+    <p>My father and our reading program's teachers trained 30 White House staff members in advanced reading techniques. Their work helped staff refine the President's Daily Brief (PDB), the one-page international intelligence document the President receives each day, and read and respond to incoming White House correspondence.</p>
+    <figure>
+        <img src="whitehouse_letter_1978.jpg" alt="Letter dated July 7, 1978, from Kenneth P. Baldridge of Baldridge Reading and Study Skills, Inc. to Landon Kite, Director of Correspondence at The White House, enclosing the final report for the reading program conducted for thirty members of the White House staff" loading="lazy">
+        <figcaption>Kenneth P. Baldridge's letter to Landon Kite, July 7, 1978.</figcaption>
+    </figure>
+    <div class="highlight-box">
+        <p>"We greatly appreciate the program conducted by your staff. It was professionally conducted, your instructors were outstanding and the participants' remarks have been very complimentary in every way."</p>
+        <span class="attr">— Landon Kite, Director of Correspondence, The White House</span>
     </div>
+    <p>I went on this trip with my parents. I was too young to get security clearance for the training, so while my father and our instructors taught in the Indian Treaty Room, I toured the White House. I still remember the entire trip. We toured the city, from the Lincoln Memorial and the Washington Monument to the Smithsonian, and stayed at a hotel in Foggy Bottom.</p>
+    <p>We also visited Arlington National Cemetery, where my grandparents are buried together, along with the Tomb of the Unknown Soldier and the Eternal Flame at President John F. Kennedy's grave.</p>
+    <p>Our family comes from Kentucky and Tennessee and has a proud history of service. My grandfather was a World War I veteran who served in the cavalry and received a Purple Heart. My grandmother was made a Kentucky Colonel for running a one-room schoolhouse in Kentucky. My father was a World War II veteran who served in the South Pacific aboard a fast battleship, saw combat, and played the piccolo in the Navy band.</p>
+
+    <h2>1979: Seven Reading Strategies</h2>
+    <p>In 1979, my father wrote <em>Seven Reading Strategies</em>. Many Ivy League and private colleges and universities bought it in bulk, and it was sold as part of the faculty and teacher workshops our family taught through the late 1970s and 1980s. College libraries carried it as well.</p>
+    <figure class="book">
+        <img src="srs_1.png" alt="Book cover: Seven Reading Strategies, by Kenneth P. Baldridge" loading="lazy">
+    </figure>
+
+    <h2>The Greenwich Library</h2>
+    <p>Back home in Greenwich, my parents loved the Greenwich Library, and we spent many hours there.</p>
+    <div class="photo-grid">
+        <figure>
+            <img src="dad_glib.jpeg" alt="Kenneth P. Baldridge walking out of the front entrance of the Greenwich Library with books in hand" loading="lazy">
+            <figcaption>My father at the front entrance of the Greenwich Library.</figcaption>
+        </figure>
+        <figure>
+            <img src="momdad_glib_1.jpeg" alt="Kenneth and Lila Baldridge holding books inside the Greenwich Library" loading="lazy">
+            <figcaption>My parents inside the Greenwich Library.</figcaption>
+        </figure>
+        <figure>
+            <img src="momglib.JPG" alt="Lila Baldridge reading a large book in an armchair at the Greenwich Library" loading="lazy">
+            <figcaption>My mother reading at the Greenwich Library.</figcaption>
+        </figure>
+    </div>
+
+    <h2>2001: Professors' Family Secrets for Raising Very Smart Children</h2>
+    <p>In 2001, my parents and I wrote <em>Professors' Family Secrets for Raising Very Smart Children</em>, with hundreds of memories from college deans and professors about how they were raised by their parents, guardians, or grandparents.</p>
+    <figure class="book">
+        <img src="smartshildren_black.png" alt="Book cover: Professors' Family Secrets for Raising Very Smart Children, by Lila, Ken and Clifford Baldridge" loading="lazy">
+    </figure>
 
     <div class="cta-row">
         <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-primary">Enroll Now — $600</a>
