@@ -49,6 +49,10 @@
         .name-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
         .name-list span { background: var(--light); border: 1px solid var(--light-grey); color: var(--primary); font-weight: 600; font-size: 0.85rem; padding: 6px 12px; border-radius: 999px; }
         .name-list span.featured { background: var(--primary); border-color: var(--primary); color: var(--white); }
+        .press-card { background: var(--light); border: 1px solid var(--light-grey); border-radius: 12px; padding: 22px 26px; margin: 4px 0 26px; }
+        .press-card a { display: block; font-size: 1.15rem; font-weight: 700; color: var(--primary); text-decoration: underline; text-underline-offset: 4px; line-height: 1.4; margin: 4px 0 6px; }
+        .press-card a:hover { color: var(--accent-dark); }
+        .press-card p { margin: 0; font-size: 0.88rem; }
         .list-label { color: var(--primary); font-weight: 700; margin-bottom: 6px; }
         .link-row { margin: 6px 0 10px; }
         .signature { color: var(--primary); font-weight: 700; }
@@ -248,7 +252,11 @@
         <span class="attr">— Lila Baldridge</span>
     </div>
     <p>She passed away on March 2, 2018, at the age of 86. My father, her husband of 48 years, passed away in 2003.</p>
-    <p class="link-row">Greenwich Time, March 20, 2018: <a href="https://www.greenwichtime.com/local/article/Memorial-services-set-for-Lila-Baldridge-86-12768033.php" target="_blank" rel="noopener noreferrer">"Memorial services set for Lila Baldridge, 86, Greenwich reading specialist"</a></p>
+    <div class="press-card">
+        <div class="back-label">In the news · Greenwich Time · March 20, 2018</div>
+        <a href="https://www.greenwichtime.com/local/article/Memorial-services-set-for-Lila-Baldridge-86-12768033.php" target="_blank" rel="noopener noreferrer">Memorial services set for Lila Baldridge, 86, Greenwich reading specialist</a>
+        <p>Read the full memorial article in Greenwich Time.</p>
+    </div>
 
     <h2>2001: Professors' Family Secrets for Raising Very Smart Children</h2>
     <p>In 2001, I helped my parents write <em>Professors' Family Secrets for Raising Very Smart Children</em>. For the book, they interviewed more than 100 college deans and professors about how they were raised by their parents, guardians, or grandparents: at mealtime, while traveling, at bedtime, and more.</p>
