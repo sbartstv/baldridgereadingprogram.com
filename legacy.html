@@ -33,6 +33,10 @@
         .highlight-box { background: var(--primary); color: var(--white); border-radius: 12px; padding: 26px 30px; margin: 22px 0; }
         .highlight-box p { color: rgba(255,255,255,0.88); font-style: italic; }
         .highlight-box .attr { font-style: normal; font-weight: 700; color: #7ecfb5; margin-top: 8px; display: block; font-size: 0.85rem; }
+        .book-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; align-items: start; }
+        .book-row img { width: 100%; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); display: block; }
+        .photo-grid { columns: 2; column-gap: 16px; margin-bottom: 22px; }
+        .photo-grid img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); margin-bottom: 16px; display: block; break-inside: avoid; }
         .caption { font-size: 0.78rem; color: var(--grey); font-style: italic; margin-top: -14px; margin-bottom: 20px; }
         .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 44px; }
         .btn-primary { background: var(--accent); color: var(--white); padding: 13px 26px; border-radius: 8px; font-size: 0.97rem; font-weight: 700; text-decoration: none; display: inline-block; }
@@ -43,7 +47,8 @@
         .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
         .footer-nav a:hover, .footer-nav a:focus { color: var(--white); }
         footer p { font-size: 0.76rem; opacity: 0.35; }
-        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } }
+        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } .photo-grid { columns: 1; } }
+        @media (max-width: 600px) { .book-row { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; } }
     </style>
 </head>
 <body>
@@ -68,6 +73,23 @@
 <main id="main-content" class="container">
     <h1>The Baldridge Family Legacy</h1>
     <p class="page-sub">Teaching students to read faster and study smarter since 1956 in Greenwich, Connecticut.</p>
+
+    <img src="mom_dad.png" alt="Mr. and Mrs. Baldridge reading a book together, 1950s" class="full-img">
+
+    <img src="Baldridgewhitehouse.jpg" alt="July 7, 1978 letter from Kenneth P. Baldridge to Landon Kite, Director of Correspondence at The White House, from the Jimmy Carter Presidential Library and Museum" class="full-img" loading="lazy">
+
+    <div class="book-row">
+        <img src="readingspeed_1.png" alt="Book cover: Reading Speed and Strategy for the Business and Professional Person, by Kenneth P. Baldridge" loading="lazy">
+        <img src="srs_1.png" alt="Book cover: Seven Reading Strategies, by Kenneth P. Baldridge" loading="lazy">
+        <img src="smartshildren_black.png" alt="Book cover: Professors' Family Secrets for Raising Very Smart Children, by Lila, Ken and Clifford Baldridge" loading="lazy">
+    </div>
+
+    <div class="photo-grid">
+        <img src="dad_glib.jpeg" alt="Mr. Baldridge leaving the Greenwich Library with books in hand" loading="lazy">
+        <img src="momdad_glib_1.jpeg" alt="Mr. and Mrs. Baldridge inside the Greenwich Library" loading="lazy">
+        <img src="momglib.JPG" alt="Mrs. Baldridge reading a book at the Greenwich Library" loading="lazy">
+        <img src="baldridge_center.png" alt="The Baldridge Reading and Study Strategy Learning Center in Greenwich, Connecticut" loading="lazy">
+    </div>
 
     <div class="cta-row">
         <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-primary">Enroll Now — $600</a>
