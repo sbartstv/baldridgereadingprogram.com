@@ -40,6 +40,11 @@
 
         /* VIDEO HERO */
         .video-hero { background: var(--primary); padding: 44px 20px 36px; text-align: center; }
+        .instructor-top { max-width: 780px; margin: 0 auto 26px; }
+        .instructor-photo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 14px; border: 4px solid rgba(255,255,255,0.85); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+        .instructor-role { color: #7ecfb5; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 4px; }
+        .instructor-title { color: var(--white); font-size: 1.15rem; font-weight: 600; line-height: 1.4; }
+        .speed-block { max-width: 780px; margin: 0 auto 30px; }
         .human-hero { max-width: 780px; margin: 0 auto 30px; }
         .human-title { color: var(--white); font-size: 2.3rem; font-weight: 800; line-height: 1.2; margin-bottom: 10px; }
         .human-tagline { color: var(--white); font-size: 1.35rem; font-weight: 600; line-height: 1.4; margin-bottom: 12px; }
@@ -173,6 +178,7 @@
             .main-nav { position: static; padding: 8px 10px; }
             .nav-links a { font-size: 0.8rem; padding: 6px 8px; }
             .human-title { font-size: 1.7rem; }
+            .instructor-photo { width: 140px; height: 140px; }
             .human-tagline { font-size: 1.1rem; }
             .video-hero h1 { font-size: 1.6rem; }
             .who-what-grid, .bullets-grid, .letter-grid, .cliff-inner { grid-template-columns: 1fr; }
@@ -209,12 +215,38 @@
 
 <!-- VIDEO HERO -->
 <section class="video-hero">
+
+    <!-- INSTRUCTOR PHOTO -->
+    <div class="instructor-top">
+        <img src="brss_cliff.jpg" alt="Clifford P. Baldridge, Instructor" class="instructor-photo">
+        <p class="instructor-role">Instructor</p>
+        <p class="instructor-title">Co-Director of Baldridge Reading and Study Strategy Program</p>
+    </div>
+
     <div class="human-hero">
         <h2 class="human-title"><span>I'm a Mentor, a Motivator,</span> <span>and a Real Coach</span> <span>for Students.</span></h2>
         <p class="human-tagline">4 Hours of One-on-One Mentoring. <em>Real Human Presence.</em></p>
         <p class="human-sub">Online tools can deliver information, but a live coach builds confidence and lasting study habits. I mentor students from 3rd through 12th grade and college freshmen. It's just your child and me, live, with every strategy fitted to how they learn and every session built to keep them motivated. I've personally taught hundreds of students at private schools and colleges in Greenwich, Connecticut, and Santa Barbara, California.</p>
         <p class="human-proof">Students have doubled — even tripled — their reading speed: <em>120 → 250 words per minute</em> at Greenwich Academy, <em>160 → 570</em> at Bedford Middle School.</p>
         <p class="human-sub">They called me "very motivational and always positive" and a "motivational speaker." Read their <a href="student-references.html">Student Reference Letters</a> and the <a href="deans-letters.html">Dean's Reference Letters</a> written for the program my family has taught since 1956.</p>
+    </div>
+
+    <!-- DOUBLE YOUR READING SPEED -->
+    <div class="speed-block">
+    <h1>Typically Double Your Reading Speed <em>in 4 Hours.</em></h1>
+    <p class="hero-sub">Learn 90+ study strategies — test taking, note-taking, essay and paper writing, and study skills. Cut study time in half. Raise test scores.</p>
+    <ul class="hero-bullets">
+        <li>Speed reading &amp; study strategy program taught at Ivy League universities, private country day schools, Christian, Catholic, Hebrew, and military schools for over 70 years</li>
+        <li>One-on-one mentoring on Zoom or in person: two 2-hour sessions over two weeks, plus a 1-hour refresher</li>
+        <li>For students in 3rd through 12th grade and college freshmen</li>
+        <li>Students use their own textbooks and summer reading material</li>
+        <li>Parents included for free</li>
+        <li>Group sessions available for schools and groups</li>
+    </ul>
+    <div class="hero-btns">
+        <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-enroll">Enroll Now — $600</a>
+        <a href="contact.html" class="btn-consult">Free Consultation</a>
+    </div>
     </div>
 
     <!-- FREE PARENT WORKSHOP -->
@@ -247,20 +279,6 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen></iframe>
-    </div>
-    <h1>Typically Double Your Reading Speed <em>in 4 Hours.</em></h1>
-    <p class="hero-sub">Learn 90+ study strategies — test taking, note-taking, essay and paper writing, and study skills. Cut study time in half. Raise test scores.</p>
-    <ul class="hero-bullets">
-        <li>Speed reading &amp; study strategy program taught at Ivy League universities, private country day schools, Christian, Catholic, Hebrew, and military schools for over 70 years</li>
-        <li>One-on-one mentoring on Zoom or in person: two 2-hour sessions over two weeks, plus a 1-hour refresher</li>
-        <li>For students in 3rd through 12th grade and college freshmen</li>
-        <li>Students use their own textbooks and summer reading material</li>
-        <li>Parents included for free</li>
-        <li>Group sessions available for schools and groups</li>
-    </ul>
-    <div class="hero-btns">
-        <a href="https://buy.stripe.com/14AbJ1gq00oU3Hr7tSdMI00" class="btn-enroll">Enroll Now — $600</a>
-        <a href="contact.html" class="btn-consult">Free Consultation</a>
     </div>
 </section>
 
