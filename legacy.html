@@ -45,6 +45,12 @@
         .photo-pair figure { margin: 0; min-width: 0; }
         .photo-pair img { aspect-ratio: 5 / 4; object-fit: cover; }
         .narrow { max-width: 560px; margin-left: auto; margin-right: auto; }
+        .cert-pair { display: flex; gap: 20px; align-items: flex-start; }
+        .cert-pair img { width: auto; min-width: 0; border-radius: 4px; }
+        .cert-pair .cert-front { flex: 1 1 0; }
+        .cert-pair .cert-back { flex: 0.748 1 0; }
+        .doc-figure img { border-radius: 4px; }
+        .back-cover ul.one-col { columns: 1; }
         .book { max-width: 320px; margin-left: auto; margin-right: auto; }
         .book img { border-radius: 4px; }
         .photo-grid { columns: 2; column-gap: 16px; }
@@ -78,7 +84,7 @@
         .footer-nav a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; }
         .footer-nav a:hover, .footer-nav a:focus { color: var(--white); }
         footer p { font-size: 0.76rem; opacity: 0.35; }
-        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } .photo-grid, .back-cover ul { columns: 1; } .photo-pair { grid-template-columns: 1fr; } .back-cover { padding: 22px 20px; } }
+        @media (max-width: 768px) { .nav-links { display: none; } h1 { font-size: 1.5rem; } .photo-grid, .back-cover ul { columns: 1; } .photo-pair { grid-template-columns: 1fr; } .back-cover { padding: 22px 20px; } .cert-pair { flex-direction: column; } .cert-pair .cert-front, .cert-pair .cert-back { flex: none; width: 100%; } }
     </style>
 </head>
 <body>
@@ -103,11 +109,11 @@
 <main id="main-content" class="container">
     <figure class="narrow">
         <img src="baldridge_center.png" alt="AI recreation of the Baldridge Reading and Study Skills Center in Greenwich, Connecticut">
-        <figcaption class="lead-caption"><span class="ai-note">AI recreation</span>This was our family's Baldridge Reading and Study Skills Center on Grigg Street in downtown Greenwich, Connecticut, between Greenwich Avenue and Arch Street, near <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a>, where we taught thousands of Greenwich residents reading, study skills, and speed reading for about 60 years, from the 1950s until my parents' passing. We also employed many local residents.</figcaption>
+        <figcaption class="lead-caption"><span class="ai-note">AI recreation</span>This was our family's Baldridge Reading and Study Skills Center on Grigg Street in downtown Greenwich, Connecticut, between Greenwich Avenue and Arch Street, near <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a>, where we taught thousands of Greenwich residents reading, study skills, and speed reading from 1955 until my parents' passing, part of more than 70 years of teaching that began in New York City in 1950. We also employed many local residents.</figcaption>
     </figure>
 
     <h1>The Baldridge Family Legacy</h1>
-    <p class="page-sub">Teaching students to read faster and study smarter since 1956 in Greenwich, Connecticut.</p>
+    <p class="page-sub">Teaching students to read faster and study smarter since 1950, first in New York City and, since 1955, in Greenwich, Connecticut.</p>
 
     <div class="photo-pair">
         <figure>
@@ -121,13 +127,14 @@
     </div>
 
     <h2>How It Began</h2>
-    <p>My parents met in New York City in the 1950s. My father, Kenneth Patrick Baldridge, earned his degree at the University of Cincinnati, where he was a varsity fencer, and his professional training was in clinical psychology. My mother, Lila, earned her master's degree from Columbia University in New York.</p>
-    <p>Together they founded Baldridge Reading and Study Skills, Inc. in 1956 as a teaching organization, with its office on Grigg Street in Greenwich, Connecticut, right next to where <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a> is today. The company grew to 30 teachers and 30 salespeople.</p>
+    <p>My parents met in New York City in 1950. My father, Kenneth Patrick Baldridge, earned his degree at the University of Cincinnati, where he was a varsity fencer, and his professional training was in clinical psychology. My mother, Lila, earned her master's degree from Columbia University in New York.</p>
+    <p>From 1950 to 1955, they built the foundation of Baldridge Reading in New York City, working with Western Electric Company, Philadelphia Electric Company, Time, Inc. (for <em>Time</em>, <em>Life</em>, and <em>Fortune</em>), the National Broadcasting Company, Canada Dry Corporation, and International Business Machines Corporation, as well as major TV stars of the day and universities and colleges. They then moved to Connecticut to raise a family.</p>
+    <p>In 1955 they opened the Baldridge Reading and Study Skills Center in a three-story office building on Grigg Street in Greenwich, Connecticut, between Greenwich Avenue and Arch Street, right next to where <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a> is today. The company grew to 30 teachers and 30 salespeople.</p>
     <p>As Co-Directors, my parents researched, developed, and supervised Baldridge instruction throughout the United States, Canada, and overseas. They also co-authored a number of publications with major publishers, including Harcourt, Brace &amp; Company and Prentice Hall. My sister, Joy Baldridge, became Co-Director in 1981.</p>
 
     <figure>
-        <img src="2brss1956.png" alt="Teachers and sales staff of Baldridge Reading Services gathered around conference tables in Greenwich, Connecticut" loading="lazy">
-        <figcaption>The teachers and sales staff of Baldridge Reading Services in Greenwich, Connecticut.</figcaption>
+        <img src="2brss1956.png" alt="Teachers and sales staff of Baldridge Reading Services gathered around conference tables in Greenwich, Connecticut, about 1955" loading="lazy">
+        <figcaption>The teachers and sales staff of Baldridge Reading Services in Greenwich, Connecticut, about 1955.</figcaption>
     </figure>
 
     <h2>1966: Reading Speed and Strategy</h2>
@@ -165,6 +172,54 @@
     <p>Our reading center was on Grigg Street, between Greenwich Avenue and Arch Street in the center of Greenwich. Our office was right next to where <a href="https://www.dianesbooks.com/" target="_blank" rel="noopener noreferrer">Diane's Books</a> is today, and Diane still runs her family bookstore there.</p>
     <p>We did all of our mailings to private schools, Ivy League colleges, and universities at the former post office on Greenwich Avenue.</p>
     <p>In 1968, my mother opened Health Well Natural Foods, the first health food store in Greenwich. My parents owned the store and its property on Greenwich Avenue, right next to the old movie theater that is now the Apple Store. As she liked to say, "It didn't make money, it didn't lose money, but we educated a lot of people."</p>
+
+    <h2>BRIM, Inc.: Baldridge Reading Instruction Materials</h2>
+    <figure>
+        <div class="cert-pair">
+            <img class="cert-front" src="brim1.png" alt="Front of an original stock certificate for Baldridge Reading Instruction Materials, Incorporated, incorporated under the laws of the State of Connecticut, with an eagle engraving and an orange border" loading="lazy">
+            <img class="cert-back" src="brim2.png" alt="Back of the Baldridge Reading Instruction Materials stock certificate, reading Certificate for Shares of Capital Stock, with a torch engraving" loading="lazy">
+        </div>
+        <figcaption>BRIM, Inc. — Baldridge Reading Instruction Materials, Incorporated. The front and back of an original stock certificate for shares in our family's publishing company, incorporated under the laws of the State of Connecticut.</figcaption>
+    </figure>
+    <figure class="narrow doc-figure">
+        <img src="brim3.png" alt="BRIM Publications: a list of the kits, books, and other reading instruction materials published by Baldridge Reading Instruction Materials, Inc." loading="lazy">
+        <figcaption>BRIM Publications, the reading instruction materials published by Baldridge Reading Instruction Materials, Inc.</figcaption>
+    </figure>
+    <p>My father was a self-published author. Through BRIM, he wrote, printed, and published his own books and teaching materials. In the basement of our Baldridge Reading Center office on Grigg Street, he ran his own printing presses, including an offset lithographic press, the most advanced printing machines of the time.</p>
+    <p>From the 1950s on, through the 1960s, 1970s, and beyond, he distributed these materials to Ivy League universities, private schools, colleges, and college libraries, including Yale, UCLA, Brown, and Johns Hopkins. He sold them to deans and gave them to teachers in our faculty and teacher workshops, and many of them are still on the shelves of university libraries today.</p>
+    <div class="back-cover">
+        <div class="back-label">BRIM Publications</div>
+        <h3>Reading Instruction Materials</h3>
+        <ul>
+            <li>Student's Kit</li>
+            <li>Teacher's Manual</li>
+            <li>Faculty Kit</li>
+        </ul>
+        <h3>Books</h3>
+        <ul class="one-col">
+            <li>Reading Speed and Strategy for the Business and Professional Person</li>
+            <li>SRS — Seven Reading Strategies</li>
+            <li>Reading and Study Techniques for Academic Subjects</li>
+            <li>Junior High School Rate and Comprehension Check Tests</li>
+            <li>High School Rate and Comprehension Check Tests</li>
+            <li>Freshman College Rate and Comprehension Check Tests</li>
+            <li>Intermediate College Rate and Comprehension Check Tests</li>
+            <li>Advanced College Rate and Comprehension Check Tests</li>
+        </ul>
+        <h3>Other Materials</h3>
+        <ul>
+            <li>Study Sample Questionnaire</li>
+            <li>How Do You Read and Study?</li>
+            <li>Reading and Study Skills Questionnaire</li>
+            <li>Introductory Technique Application Sheet</li>
+            <li>Technique Application Sheet</li>
+            <li>Notes and Interpretation Sheet</li>
+            <li>Technique Application Wall Chart</li>
+            <li>Technique Application Sticker</li>
+            <li>Structure Diagrams Wall Chart</li>
+            <li>Reading and Study Skills Workshops</li>
+        </ul>
+    </div>
 
     <h2>1978: The White House</h2>
     <div class="highlight-box">
